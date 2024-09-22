@@ -2,6 +2,8 @@ from PersonClass import Person
 """
 Given the different possible family trees:
 familyTreeLister returns a list of Person classes.
+ x = dead
+ * = alive
 
 1)
 g  * x ___

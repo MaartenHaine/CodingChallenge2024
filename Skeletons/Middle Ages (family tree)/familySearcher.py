@@ -2,7 +2,8 @@
 
 
 """
-from FamilyTreeBuilder import FamilyTree, famTreeBuilder, famLister
+from familyTree import FamilyTree
+from familyTreeBuilder import famTreeBuilder, famLister
 
 links = famLister(4)
 treeList = famTreeBuilder(links)

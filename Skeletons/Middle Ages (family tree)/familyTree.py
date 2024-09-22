@@ -1,15 +1,20 @@
 """
+Given is an incomplete python class for a Family Tree Entity
+The setup, get and equals functions are already given,
+but you still have to implement the set and remove functions (task 1)
+and the up and down listing (task 2).
 
+For uplisting, it should look as follows:
+ [self, [parent1, [grandparent1, [...], [...]], [grandparent2, [...], [...]]], [parent2, [...], [...]]
 
+For downlisting, it should look as follows:
+ [self, [child1, [grandchild1, [...], [...]], ...], [child2, ...], ...]
 """
-from familyTreeLister import famLister
-
-links = famLister(4)
 
 
 class FamilyTree:
 
-    def __init__(self, name: str, isAlive: bool = True): #gegeven
+    def __init__(self, name: str, isAlive: bool = True):
         self.parents = []
         self.children = []
         self._name = name
@@ -60,18 +65,3 @@ class FamilyTree:
             if not isIn:
                 return False
         return True
-
-
-def famTreeBuilder(links): #TODO 1
-    #connects all family entities to eachother
-    pass
-
-
-#DO NOT CHANGE
-treelist = famTreeBuilder(links)
-for treeEntity in treelist:
-    print("name:" + treeEntity.getName())
-    print(treeEntity.downlisting())
-    print(treeEntity.uplisting())
-    print("========================")
-

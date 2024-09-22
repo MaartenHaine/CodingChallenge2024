@@ -1,6 +1,6 @@
 '''
-Given the class "Person", every person has an unique name and is alive or dead.
-Not every family member has a known mother or father (lost due to memory).
+Given the class "Person", every person has a unique name and is alive or dead.
+Not every family member has a known mother or father (lost to history).
 '''
 
 class Person:
