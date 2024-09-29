@@ -1,31 +1,38 @@
 """
-
+Due to difficult economic times, they are looking to dismiss someone.
+Identify the slowest driver.
 """
+import datetime as dt
 
-def find_worst_shipper(file_incoming: str,file_outgoing: str): 
-    shippers_stats= {}
-    with open(file_incoming, "r") as f1, open(file_outgoing,"r") as f2:
-        breakpoint()
-        for line in f2.readlines():
-            person, date = line.split("|")
-            if person in shippers_stats:
-                shippers_stats[person][0] += 1
+
+def find_slowest_driver(file_incoming: str, file_outgoing: str):
+    driver_stats = {}
+    with open(file_incoming, "r") as incoming, open(file_outgoing, "r") as outgoing:
+        # get the outgoing traffic
+        for line in outgoing.readlines():
+            person, amount, date = line.split("|")
+            date = date.replace("\n", "")
+            if person in driver_stats:
+                driver_stats[person][0].append(dt.datetime.fromisoformat(date))
             else:
-                shippers_stats[person] = [1,0]
-        
-        for line in f1.readlines():
-            person, date = line.split("|")
-            shippers_stats[person][1] += 1
-    # find the worst shipper
-    worst_person = ""
-    worst_stats =1
-    for person, stats in shippers_stats.items():
-        print(stats)
-        if (stats[1]/stats[0]) <worst_stats:
-            worst_person = person
-            worst_stats = stats[1]/stats[0]
-    print(f"worst stats:{worst_stats}")
-    print(f"worst person: {person}")
-    return worst_person
+                driver_stats[person] = [[dt.datetime.fromisoformat(date)], []]
 
-find_worst_shipper("in.csv","out.csv")
+        # get the incoming traffic
+        for line in incoming.readlines():
+            person, amount, date = line.split("|")
+            date = date.replace("\n", "")
+            driver_stats[person][1].append(dt.datetime.fromisoformat(date))
+
+    # calculate average shipping time
+    worst_driver = ""
+    worst_time = 0
+    for name, stats in driver_stats.items():
+        shipping_times = map(lambda x: x[1] - x[0], zip(stats[0], stats[1]))
+        avg_time = sum(shipping_times, dt.timedelta(0)).total_seconds() / len(stats[0])
+        if avg_time > worst_time:
+            worst_time = avg_time
+            worst_driver = name
+    return worst_driver
+
+
+print(find_slowest_driver("in.txt", "out_valid.txt"))

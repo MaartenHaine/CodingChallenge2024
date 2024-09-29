@@ -1,35 +1,40 @@
 """
-opdrzcht 1 parse the logbooks ot usable csv file's
-opdracht 2 zoek de shippments da verstuurt worden maar niet aankomen
-opdracht 3 zoek de persoon die het meeste shipments verliest
+This script generates logbook entries for outgoing and incoming shipments.
 """
 import datetime as dt
 import random
-SHIPPERS = 1000
+
+# amount of drivers, logs, ...
+DRIVERS = 1000
 LOGS = 1000_000
-LOST_SHIPMENT_PROB = 0.2
-date = dt.datetime.fromisoformat('1650-01-01:00:00:00')
+LOST_SHIPMENT_PROB = 0.01
+date = dt.datetime.fromisoformat('1908-10-01:00:00:00')
+
+
 def get_names():
     names = list()
     with open("names.txt") as names_file:
-         names_str = names_file.read()
-         names += names_str.split("\n")
+        names_str = names_file.read()
+        names += names_str.split("\n")
     return names
 
-names = get_names()
-shippers = [name for name in random.sample(names, 1000)]
-breakpoint()
-with open("outgoing.txt","w") as ship_out, open("incoming.txt","w") as ship_in:
-    inkomingshipments = []
-    for _ in range(LOGS):
-        shipper = random.choice(shippers)
-        ship_out.write(f"{shipper} took {random.randint(1,10)} cars on {date}\n")
-        date = date+dt.timedelta(minutes=random.randint(0,10))
-        recieved_date = date+dt.timedelta(hours=random.randint(20,100))
-        if random.random()>LOST_SHIPMENT_PROB:
-            inkomingshipments.append((f"{shipper} brought {random.randint(1,10)}cars on {recieved_date}\n", recieved_date))
-    inkomingshipments.sort(key=lambda x:x[1])
-    for shipment in inkomingshipments:
-        ship_in.write(shipment[0])
-    
 
+names = get_names()
+drivers = [name for name in random.sample(names, DRIVERS)]
+
+with open("outgoing.txt", "w") as out, open("incoming.txt", "w") as incoming, open("out_valid.txt", "w") as out_valid:
+    incoming_shipments = []
+
+    for _ in range(LOGS):
+        driver = random.choice(drivers)
+        amount = random.randint(1, 10)
+        out.write(f"{driver} took {amount} cars on {date}\n")
+        date = date + dt.timedelta(minutes=random.randint(0, 10))
+        arrival_date = date + dt.timedelta(hours=random.randint(20, 100))
+        if random.random() > LOST_SHIPMENT_PROB:
+            out_valid.write(f"{driver}|{amount}|{date}\n")
+            incoming_shipments.append((f"{driver} brought {amount} cars on {arrival_date}\n", arrival_date))
+
+    incoming_shipments.sort(key=lambda x: x[1])
+    for shipment in incoming_shipments:
+        incoming.write(shipment[0])
