@@ -1,9 +1,12 @@
 """
-Na consultatie met Minos hebben weten we de huidige positie van de chatotaurus, echter is dat enkel de huidige positie!
-Minos vertelt ons ook dat de chatotaurus elke stap zich verplaatst.
-Het heeft ook moeite met multitasken, dus tijdens het verplaatsen merkt hij geen voorbijgangers op.
-Schrijf nu eerst een programma dat voorspelt waar de chatotaurus zich kan bevinden na N aantal stappen (alle mogelijkheden)
-gegeven de startpositie van de chatotaurus en de lay-out van het doolhof.
+After consultation with Minos, we know the current position of the chatotaurus.
+He also tells us a few rules of this chatotaurus:
+ - It can't stay in one spot (it is always on the move)
+ - When it changes location, it can't detect anyone (so it is safe to pass)
+Only when both you and it are standing on the same location, you will get caught.
+
+Write a program that can calculate all different locations the chatotaurus will be in after N amount of steps.
+Given the layout of the labyrinth and the starting position of the chatotaurus.
 """
 #0 is a pathway
 #1 is a wall
@@ -43,5 +46,5 @@ def possibleMinotaurPos(maze, firstPos, steps):
     return mySet
 
 
-for item in possibleMinotaurPos(maze, position, 8):
-    print(item)
+#DO NOT CHANGE
+print(possibleMinotaurPos(maze, position, 8))

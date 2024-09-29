@@ -1,9 +1,8 @@
 """
-Oh neen! We waren de chatotaurus vergeten, gelukkig weten we waar hij zich bevindt.
-Schrijf nu een algoritme dat het snelste pad berekend zonder de chatotaurus mogelijks tegen te komen!
-
-Nota 1: de chatotaurus kan je enkel vinden indien je op hetzelfde vakje zit (kruisen mag).
-Nota 2: de angst voor mogelijks de chatotaurus tegen te komen zorgt dat je zelf niet kan stilstaan!
+Now that we have a program that can calculate the locations of the chatotaurus
+and a program that seeks the fastest way out of the labyrinth,
+combine the two so that you can find the optimal path without encountering the chatotaurus.
+You are given the layout of the labyrinth, the starting position of the chatotaurus and your own starting position.
 """
 #0 is a pathway
 #1 is a wall
@@ -101,9 +100,7 @@ def shortestPath(maze, position):
     return shortest
 
 
-"""
-for item in backtracking(maze, position):
-    print(item)
-"""
+def optimalPath(maze, position, minoPos):
+    return shortestPath(maze, position)
 
-print(shortestPath(maze, position))
+print(optimalPath(maze, position, minoPos))

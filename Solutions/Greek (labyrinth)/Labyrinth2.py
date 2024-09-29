@@ -1,6 +1,7 @@
 """
-We zijn zelf in het labyrinth gegooid, schrijf een backtracking algoritme dat ons de weg toont naar buiten.
-
+Write a program that can calculate the fastest path you should take to escape from the labyrinth.
+Given the layout of the labyrinth and your starting position.
+Assume that the chatotaurus is not yet in the labyrinth.
 """
 #0 is a pathway
 #1 is a wall
@@ -55,6 +56,5 @@ def backtracking(maze, position, part_sol= None):
     return list
 
 
-for item in backtracking(maze, position):
-    print(item)
+print(backtracking(maze, position))
 
