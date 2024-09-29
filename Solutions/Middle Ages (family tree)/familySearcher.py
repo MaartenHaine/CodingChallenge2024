@@ -35,9 +35,13 @@ def SuccessorSearcher(person: FamilyTree, path=None):
                 return res
     return None
 
-#'''
+'''
 died = NameSearcher(name, treeList)
 print(died.getName())
 print(SuccessorSearcher(died))
 print(SuccessorSearcher(died).getName())
-#'''
+'''
+
+#DO NOT CHANGE
+print(SuccessorSearcher(NameSearcher(name, treeList), treeList))
+#
