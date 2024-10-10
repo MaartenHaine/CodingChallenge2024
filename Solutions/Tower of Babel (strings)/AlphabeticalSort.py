@@ -9,7 +9,6 @@ dictionairy = ["This", "excercise", "is", "pretty", "interesting"]
 longer = ['The', 'world', 'of', 'language', 'has', 'been', 'turned', 'to', 'chaos', 'nobody', 'can', 'understand', 'another', 'It', 'is', 'your', 'task', 'gather', 'words', 'from', 'this', 'explanation', 'In', 'a', 'list', 'there', 'should', 'be', 'no', 'double', 'and', 'punctuation', 'marks', 'Good', 'luck']
 
 
-
 dictionairyIndex = {'a':1, 'b':2, 'c':3, 'd':4, 'e':5,
                     'f':6, 'g':7, 'h':8, 'i':9, 'j':10,
                     'k':11, 'l':12, 'm':13, 'n':14, 'o':15,
@@ -49,5 +48,3 @@ def sorting(lijst: list[str]):
         insert_correctly(newLijst, word)
         #print(newLijst)
     return newLijst
-
-print(sorting(longer))
