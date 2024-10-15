@@ -18,5 +18,4 @@ def counter(lijst: list):
             count += 1
     return count
 
-
 print(counter(lijst))

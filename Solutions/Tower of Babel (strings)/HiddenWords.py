@@ -3,7 +3,7 @@ There are words hidden in plain sight, namely inside already gathered words.
 These words can be found by only selecting a few letters of word sequences.
 Given is an extra list of words, check which words can already be found by using the gathered words.
 
-The words can be found be putting multiple words together and filtering their letters.
+The words can be found by putting multiple words together and filtering their letters.
 Take for example the sequence:
  "This exercise is pretty interesting"
 In the sentence, words like, "ex", "resting" and even "he" can be found.
@@ -18,13 +18,13 @@ In this example we can use "there" + "was" + "octopus" to get "react", but we ca
 Good Luck
 """
 
-dictionairy = ["This", "excercise", "is", "pretty", "interesting"]
+dictionairy = ["This", "exercise", "is", "pretty", "interesting"]
 extra_words = ["ex", "resting", "thing", "init", "dol", "he", "turn", "toch", "body", "under", "an"]
 
 longer = ['The', 'world', 'of', 'language', 'has', 'been', 'turned', 'to', 'chaos', 'nobody', 'can', 'understand', 'another', 'It', 'is', 'your', 'task', 'gather', 'words', 'from', 'this', 'explanation', 'In', 'a', 'list', 'there', 'should', 'be', 'no', 'double', 'and', 'punctuation', 'marks', 'Good', 'luck']
 
 more_long = ['There', 'was', 'once', 'a', 'little', 'octopus']
-react = ["react"]
+react = ["react", "stop"]
 
 
 def gatherLetters(word: str): #puts the letters of a word in a set
