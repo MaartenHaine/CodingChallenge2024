@@ -1,6 +1,8 @@
 """
 Due to difficult economic times, they are looking to dismiss someone.
 Identify the slowest driver.
+
+hint: The file out_valid.txt contains all of the shipments that were successfully delivered.
 """
 
 

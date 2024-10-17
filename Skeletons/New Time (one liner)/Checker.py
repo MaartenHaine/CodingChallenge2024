@@ -1,6 +1,7 @@
 """
 validate the one liner by counting the amount of lines in the program.
 and checking a few test cases
+
 """
 from Challenge import *
 
