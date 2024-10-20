@@ -1,11 +1,10 @@
 """
-Jij bent verantwoordelijk voor het schrijven van een één-regelige inputvalidatie die elk bericht controleert.
-Deze validatie moet ervoor zorgen dat er geen gecodeerde informatie in vijandige handen valt.
-
-Vereisten:
-    Het bericht mag niet langer zijn dan 256 tekens.
-    Alleen alfanumerieke tekens en de volgende leestekens zijn toegestaan: . , ! ? ; :.
-    Het bericht mag geen lange numerieke reeksen (meer dan 10 cijfers) bevatten.
+As a newspaper editor, you need to validate incoming articles quickly.
+Create a one-line input validation that checks each submission.
+Requirements:
+    Articles must be 256 characters or less,
+    use only alphanumeric characters and basic punctuation (. , ! ? ; :),
+    and avoid long number sequences (over 10 digits).
 """
 
 
