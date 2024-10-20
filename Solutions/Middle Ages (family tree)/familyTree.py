@@ -11,8 +11,7 @@ For downlisting, it should look as follows:
  [self, [child1, [grandchild1, [...], [...]], ...], [child2, ...], ...]
 """
 from familyTreeLister import famLister
-links = famLister(4)
-
+#links = famLister(4)
 
 class FamilyTree:
 
@@ -90,7 +89,7 @@ class FamilyTree:
                 return False
         return True
 
-
+'''
 def famTreeBuilder(links):
     treelist = []
     for link in links:
@@ -101,7 +100,7 @@ def famTreeBuilder(links):
                     person.set_child(newtree)
         treelist.append(newtree)
     return treelist
-
+'''
 '''
 treelist = famTreeBuilder(links)
 treelist2 = famTreeBuilder(links)

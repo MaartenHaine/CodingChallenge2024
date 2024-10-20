@@ -6,13 +6,15 @@ Given is an extra list of words, check which words can already be found by using
 In this excercise you should only look at adjacent words in a sentence and respect the order in which they are said.
 For example, take "this" + "exercise" -> "he", but "exercise" + "this" -x-> "he".
 """
-dictionairy = ["This", "exercise", "is", "pretty", "interesting"]
-extra_words = ["ex", "resting", "thing", "init", "dol", "he", "turn", "toch", "body", "under", "an"]
 
-longer = ['The', 'world', 'of', 'language', 'has', 'been', 'turned', 'to', 'chaos', 'nobody', 'can', 'understand', 'another', 'It', 'is', 'your', 'task', 'gather', 'words', 'from', 'this', 'explanation', 'In', 'a', 'list', 'there', 'should', 'be', 'no', 'double', 'and', 'punctuation', 'marks', 'Good', 'luck']
 
-more_long = ['There', 'was', 'once', 'a', 'little', 'octopus']
-react = ["react"]
+#sentence_words = ['There', 'was', 'once', 'a', 'little', 'octopus']
+#possible_words = ["ex", "resting", "thing", "init", "dol", "he", "turn", "toch", "body", "under", "an", "react", "stop"]
+
+### INPUT - DO NOT TOUCH
+sentence_words = eval(input())
+possible_words = eval(input())
+### END INPUT
 
 
 def gatherLetters(word: str): #puts the letters of a word in a set
@@ -31,7 +33,7 @@ def keepLetters(word, letters): #replaces all other characters than given by let
     return word
 
 
-def hiddenWords(lijst: list[str], possibleWords: list[str]):
+def hiddenWords(lijst: list[str], possibleWords: list[str]) -> list:
     pwords = []
     for pword in possibleWords: #iterate the given possible words
         longword = ""
@@ -48,6 +50,4 @@ def hiddenWords(lijst: list[str], possibleWords: list[str]):
                 pwords.append(pword)
     return pwords
 
-print(hiddenWords(dictionairy, extra_words))
-print(hiddenWords(longer, extra_words))
-print(hiddenWords(more_long, react + extra_words))
+print(hiddenWords(sentence_words, possible_words))

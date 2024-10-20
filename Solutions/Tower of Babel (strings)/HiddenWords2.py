@@ -18,13 +18,14 @@ In this example we can use "there" + "was" + "octopus" to get "react", but we ca
 Good Luck
 """
 
-dictionairy = ["This", "exercise", "is", "pretty", "interesting"]
-extra_words = ["ex", "resting", "thing", "init", "dol", "he", "turn", "toch", "body", "under", "an"]
 
-longer = ['The', 'world', 'of', 'language', 'has', 'been', 'turned', 'to', 'chaos', 'nobody', 'can', 'understand', 'another', 'It', 'is', 'your', 'task', 'gather', 'words', 'from', 'this', 'explanation', 'In', 'a', 'list', 'there', 'should', 'be', 'no', 'double', 'and', 'punctuation', 'marks', 'Good', 'luck']
+#sentence_words = ["This", "exercise", "is", "pretty", "interesting"]
+#possible_words = ["ex", "resting", "thing", "init", "dol", "he", "turn", "toch", "body", "under", "an"]
 
-more_long = ['There', 'was', 'once', 'a', 'little', 'octopus']
-react = ["react", "stop"]
+### INPUT - DO NOT TOUCH
+sentence_words = eval(input())
+possible_words = eval(input())
+### END INPUT
 
 
 def gatherLetters(word: str): #puts the letters of a word in a set
@@ -79,7 +80,7 @@ def recursiveSearch(pword : str, cutlijst: list[str], index = -1, part_sol = Non
     return False
 
 
-def hiddenWords(lijst: list[str], possibleWords: list[str]):
+def hiddenWords(lijst: list[str], possibleWords: list[str]) -> list:
     pwords = []
     for pword in possibleWords: #iterate the given possible words
         cutlijst = []
@@ -96,6 +97,5 @@ def hiddenWords(lijst: list[str], possibleWords: list[str]):
                 pwords.append(pword)
     return pwords
 
-print(hiddenWords(dictionairy, extra_words))
-print(hiddenWords(longer, extra_words))
-print(hiddenWords(more_long, react + extra_words))
+print(hiddenWords(sentence_words, possible_words))
+

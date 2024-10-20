@@ -5,9 +5,14 @@
 from familyTree import FamilyTree
 from familyTreeBuilder import famTreeBuilder, famLister
 
-links = famLister(4)
+#links = famLister(4)
+#treeList = famTreeBuilder(links)
+#name = "c1"
+
+### INPUT - DO NOT TOUCH
+links, name = eval(input()).split("\n")
 treeList = famTreeBuilder(links)
-name = "c1"
+### END INPUT
 
 
 def SuccessorSearcher(name : str, treeList : list[FamilyTree]): #TODO

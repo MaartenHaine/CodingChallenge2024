@@ -11,18 +11,7 @@ string = eval(input())
 ### END INPUT
 
 def gatherWords(string: str) -> list:
-    word = ""
-    for letter in string:
-        if letter.isalpha() or letter == " ":
-            word += letter
-    string = word
-    wordSet = []
-    wordList = string.split()
-    for word in wordList:
-        word = word.lower()
-        if word not in wordSet:
-            wordSet.append(word)
-    return wordSet
+    return []
 
 
 print(gatherWords(string))
