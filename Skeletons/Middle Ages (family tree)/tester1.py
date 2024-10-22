@@ -1,4 +1,4 @@
-from familyTree import FamilyTree
+from familyTreeEntity import FamilyTree
 
 son = FamilyTree('son')
 father = FamilyTree('father')

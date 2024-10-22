@@ -10,8 +10,7 @@ For uplisting, it should look as follows:
 For downlisting, it should look as follows:
  [self, [child1, [grandchild1, [...], [...]], ...], [child2, ...], ...]
 """
-from familyTreeLister import famLister
-#links = famLister(4)
+
 
 class FamilyTree:
 
@@ -89,8 +88,8 @@ class FamilyTree:
                 return False
         return True
 
-'''
-def famTreeBuilder(links):
+
+def famTreeBuilder(links) -> list:
     treelist = []
     for link in links:
         newtree = FamilyTree(str(link), link.isAlive())
@@ -100,17 +99,4 @@ def famTreeBuilder(links):
                     person.set_child(newtree)
         treelist.append(newtree)
     return treelist
-'''
-'''
-treelist = famTreeBuilder(links)
-treelist2 = famTreeBuilder(links)
-for treeEntity in treelist:
-    print("name:" + treeEntity.getName())
-    print(treeEntity.downlisting())
-    print(treeEntity.uplisting())
-    print("========================")
-
-for i in range(0, len(treelist) -1):
-    print(treelist[i].equals(treelist2[i]))
-'''
 

@@ -65,3 +65,7 @@ class FamilyTree:
             if not isIn:
                 return False
         return True
+
+def famTreeBuilder(links) -> list: #TODO 2
+    # connects all family entities to eachother
+    return []

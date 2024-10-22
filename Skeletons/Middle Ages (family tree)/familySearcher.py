@@ -2,16 +2,18 @@
 
 
 """
-from familyTree import FamilyTree
-from familyTreeBuilder import famTreeBuilder, famLister
+from familyTreeEntity import FamilyTree, famTreeBuilder
+from PersonClass import Person
 
-#links = famLister(4)
-#treeList = famTreeBuilder(links)
-#name = "c1"
 
 ### INPUT - DO NOT TOUCH
-links, name = eval(input()).split("\n")
+inputs = eval(input())
+links = []
+while input != "END":
+    links.append(Person(inputs[0], inputs[1], inputs[2], inputs[3]))
+    inputs = eval(input())
 treeList = famTreeBuilder(links)
+name = eval(input())
 ### END INPUT
 
 
@@ -19,5 +21,6 @@ def SuccessorSearcher(name : str, treeList : list[FamilyTree]): #TODO
     pass
 
 #DO NOT CHANGE
-print(SuccessorSearcher(name, treeList))
+successor = SuccessorSearcher(name, treeList)
+print(successor.getName())
 #

@@ -33,7 +33,7 @@ p   x - x  *-x
 c     x     *
 
 """
-def famLister(get = 1):
+def famLister(get = 0):
     links = []
     if get == 1:
         links.append(Person("g1"))

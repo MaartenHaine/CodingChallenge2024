@@ -2,20 +2,32 @@
 
 
 """
-from familyTree import FamilyTree, famTreeBuilder, famLister
+from familyTreeLister import famLister
+from familyTreeEntity import FamilyTree, famTreeBuilder
+from PersonClass import Person
 
-links = famLister(4)
+#links = famLister(4)
+#treeList = famTreeBuilder(links)
+#name = "c1"
+
+### INPUT - DO NOT TOUCH
+inputs = eval(input())
+links = []
+while inputs != "END":
+    links.append(Person(inputs[0], inputs[1], inputs[2], inputs[3]))
+    inputs = eval(input())
 treeList = famTreeBuilder(links)
-name = "c1"
+name = eval(input())
+### END INPUT
 
 
-def NameSearcher(name: str, treeList: FamilyTree):
+def NameSearcher(name: str, treeList: list[FamilyTree]):
     for treeEntity in treeList:
         if treeEntity.getName() == name:
             return treeEntity
 
 
-def SuccessorSearcher(person: FamilyTree, path=None):
+def SuccessorSearcher(person, path=None):
     if path is None:
         path = []
 
@@ -43,5 +55,9 @@ print(SuccessorSearcher(died).getName())
 '''
 
 #DO NOT CHANGE
-print(SuccessorSearcher(NameSearcher(name, treeList), treeList))
+successor = SuccessorSearcher(NameSearcher(name, treeList), treeList)
+try:
+    print(successor.getName())
+except:
+    print("None")
 #
