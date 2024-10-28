@@ -1,0 +1,16 @@
+["gg1", "", "", False]
+["gg2", "", "", False]
+["gg3", "", "", False]
+["gg4", "", "", False]
+["g1", "", "", False]
+["g2", "gg1", "gg2", False]
+["g3", "gg1", "gg2", False]
+["g4", "gg3", "gg4", False]
+["p1", "g1", "g2", False]
+["p2", "gg1", "gg2", False]
+["p3", "g3", "g4", True]
+["p4", "", "", False]
+["c1", "p1", "p2", False]
+["c2", "p3", "p4", True]
+"END"
+"c1"

@@ -1,14 +1,9 @@
 """
-
-
+OH NO! The last heir of a noble family has been killed.
+Given the family Tree Entity of his family, write a program to find the closest living successor.
 """
-from familyTreeLister import famLister
 from familyTreeEntity import FamilyTree, famTreeBuilder
 from PersonClass import Person
-
-#links = famLister(4)
-#treeList = famTreeBuilder(links)
-#name = "c1"
 
 ### INPUT - DO NOT TOUCH
 inputs = eval(input())

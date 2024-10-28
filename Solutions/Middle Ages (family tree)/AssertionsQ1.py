@@ -22,3 +22,4 @@ assert len(mother.getChildren()) == 1
 assert father.getChildren()[0].equals(son)
 assert mother.getChildren()[0].equals(son)
 
+print(0)
