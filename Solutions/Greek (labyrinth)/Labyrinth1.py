@@ -11,14 +11,19 @@ Given the layout of the labyrinth and the starting position of the chatotaurus.
 #0 is a pathway
 #1 is a wall
 #2 is the goal
-maze = [[0, 0, 0, 0, 0, 0],
-        [0, 1, 1, 0, 1, 0],
-        [1, 1, 0, 0, 1, 0],
-        [0, 0, 0, 1, 0, 0],
-        [0, 1, 0, 1, 0, 1],
-        [0, 2, 1, 1, 0, 0]]
-position = (2, 3)
+#maze = [[0, 0, 0, 0, 0, 0],
+#        [0, 1, 1, 0, 1, 0],
+#        [1, 1, 0, 0, 1, 0],
+#        [0, 0, 0, 1, 0, 0],
+#        [0, 1, 0, 1, 0, 1],
+#        [0, 2, 0, 0, 0, 0]]
+#position = (2, 3)
 
+### INPUT - DO NOT TOUCH
+maze = eval(input())
+position = eval(input())
+steps = eval(input())
+### END INPUT
 
 def minotaurPos(maze, prevPos) -> list:
     y, x = prevPos
@@ -47,4 +52,6 @@ def possibleMinotaurPos(maze, firstPos, steps):
 
 
 #DO NOT CHANGE
-print(possibleMinotaurPos(maze, position, 8))
+sol = [item for item in possibleMinotaurPos(maze, position, steps)]
+sol.sort()
+print(sol)
