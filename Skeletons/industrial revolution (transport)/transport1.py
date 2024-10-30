@@ -13,9 +13,10 @@ def convertor(filename: str, new_name: str):
     # implement your function here
     pass
 
-
+## OUTPUT DO NOT TOUCH
 convertor("incoming.txt", "in.txt")
 convertor("outgoing.txt", "out.txt")
 
 hash_incoming = hash.getHash("in.txt")
 hash_outgoing = hash.getHash("out.txt")
+print(hash_incoming, hash_outgoing)

@@ -8,7 +8,12 @@ Requirements:
 hints:
     regex importeren via __import__("re")
 """
+### INPUT - DO NOT TOUCH
+articles = eval(input())
+### END INPUT
 
+def validate(article: str) -> bool:
+    return (len(article) <= 256) and all( (char in [".", ",", "!", "?", ";", ":", " "] or char.isalnum()) for char in article) and (lambda article: __import__ ("re").search(r"\d{11,}", article))(article) is None
 
-def validate(message: str) -> bool:
-    return (message.isalnum() and len(message) <= 256) and all( char in ".,!?;:".split() or char.isalnum() for char in message) and (lambda message: __import__ ("re").search(r"\d{11,}", message))(message) is None
+### OUTPUT - DO NOT TOUCH
+print([validate(article) for article in articles])
