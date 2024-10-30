@@ -7,53 +7,70 @@ You are given the layout of the labyrinth, the starting position of the chatotau
 #0 is a pathway
 #1 is a wall
 #2 is the goal
-maze = [[0, 0, 0, 0, 0, 0],
-        [0, 1, 1, 0, 1, 0],
-        [1, 1, 0, 0, 1, 0],
-        [0, 0, 0, 1, 0, 0],
-        [0, 1, 0, 1, 0, 1],
-        [0, 2, 0, 0, 0, 0]]
-position = (0, 0)
-minoPos = (2, 3)
+#maze = [[0, 0, 0, 0, 0, 0],
+#        [0, 1, 1, 0, 1, 0],
+#        [1, 1, 0, 0, 1, 0],
+#        [0, 0, 0, 1, 0, 0],
+#        [0, 1, 0, 1, 0, 1],
+#        [0, 2, 0, 0, 0, 0]]
+# [[0,0,1,2,0,1,0],
+#  [1,0,0,1,0,0,0],
+#  [1,1,0,1,1,0,1],
+#  [0,0,0,1,0,0,0],
+#  [0,1,0,0,0,1,0],
+#  [0,1,0,1,1,1,0],
+#  [0,0,0,0,0,0,0]]
+#position = (0, 0)
+#minoPos = (2, 3)
+
+### INPUT - DO NOT TOUCH
+maze = eval(input())
+position = eval(input())
+minoPos = eval(input())
+### END INPUT
 
 
 def minotaurPos(maze, prevPos) -> list:
     y, x = prevPos
     options = []
-    if x - 1 >= 0 and maze[x-1][y] != 1:
-        options.append((y, x - 1))
-    if x + 1 < len(maze[0]) and maze[x+1][y] != 1:
-        options.append((y, x + 1))
-    if y - 1 >= 0 and maze[x][y-1] != 1:
-        options.append((y - 1, x))
-    if y + 1 < len(maze) and maze[x][y+1] != 1:
-        options.append((y + 1, x))
+    if x - 1 >= 0:
+        if maze[x-1][y] != 1:
+            options.append((y, x - 1))
+    if x + 1 < len(maze):
+        if maze[x+1][y] != 1:
+            options.append((y, x + 1))
+    if y - 1 >= 0:
+        if maze[x][y-1] != 1:
+            options.append((y - 1, x))
+    if y + 1 < len(maze[0]):
+        if maze[x][y+1] != 1:
+            options.append((y + 1, x))
     return options
 
 
 def possibleMinotaurPos(maze, firstPos, steps):
     if steps <= 0:
-        return [firstPos]
+        return {firstPos}
     mySet = set()
     for option in minotaurPos(maze, firstPos):
         res = possibleMinotaurPos(maze, option, steps-1)
         if res is not None:
-            for item in res:
-                mySet.add(item)
+            mySet = mySet.union(res)
     return mySet
 
 
-def examine(maze, position, part_sol, steps) -> str:
+def examine(maze, position, part_sol, minoPosList) -> str:
     y, x = position
     if position in part_sol:
+        #print('been here')
         return "WRONG"
     if maze[x][y] == 1:
+        #print('wall')
         return "WRONG"
     elif maze[x][y] == 2:
         return "DONE"
-    minosPos = possibleMinotaurPos(maze, minoPos, steps)
     #print('minos',minosPos)
-    if position in minosPos:
+    if position in minoPosList:
         #print('caught!')
         return "WRONG"
     return "CONTINUE"
@@ -64,33 +81,40 @@ def extend(maze, position) -> list:
     options = []
     if x-1 >= 0:
         options.append((y, x-1))
-    if x+1 < len(maze[0]):
+    if x+1 < len(maze):
         options.append((y, x+1))
     if y-1 >= 0:
         options.append((y-1, x))
-    if y+1 < len(maze):
+    if y+1 < len(maze[0]):
         options.append((y+1, x))
     return options
 
 
-def backtracking(maze, position, part_sol=None, step=0):
+def backtracking(maze, position, minoPosSet, part_sol=None):
+    #print('position', part_sol, position)
+    #print('minoPos', minoPosSet)
     if part_sol is None:
         part_sol = []
-    b = examine(maze, position, part_sol, step)
+    b = examine(maze, position, part_sol, minoPosSet)
+    #print(b)
     if b == "WRONG":
         return None
     if b == "DONE":
         return [part_sol + [position]]
     list = []
     for option in extend(maze, position):
-        res = backtracking(maze, option, part_sol + [position], step+1)
+        newminoPosSet = set()
+        for minotaurusPos in minoPosSet:
+            minoSet = possibleMinotaurPos(maze, minotaurusPos, 1)
+            newminoPosSet = newminoPosSet.union(minoSet)
+        res = backtracking(maze, option, newminoPosSet, part_sol + [position])
         if res is not None:
             list += res
     return list
 
 
-def shortestPath(maze, position):
-    paths = backtracking(maze, position)
+def optimalPath(maze, position, minoPos):
+    paths = backtracking(maze, position, {minoPos})
     lengte = float('inf')
     shortest = None
     for path in paths:
@@ -99,8 +123,8 @@ def shortestPath(maze, position):
             shortest = path
     return shortest
 
-
-def optimalPath(maze, position, minoPos):
-    return shortestPath(maze, position)
-
-print(optimalPath(maze, position, minoPos))
+# DO NOT CHANGE
+try:
+    print(optimalPath(maze, position, minoPos))
+except:
+    print("None")

@@ -6,14 +6,18 @@ Assume that the chatotaurus is not yet in the labyrinth.
 #0 is a pathway
 #1 is a wall
 #2 is the goal
-maze = [[0, 0, 0, 0, 0, 0],
-        [0, 1, 1, 0, 1, 0],
-        [1, 1, 0, 0, 1, 0],
-        [0, 0, 0, 1, 0, 0],
-        [0, 1, 0, 1, 0, 1],
-        [0, 2, 1, 1, 0, 0]]
-position = (0, 0)
+#maze = [[0, 0, 0, 0, 0, 0],
+#        [0, 1, 1, 0, 1, 0],
+#        [1, 1, 0, 0, 1, 0],
+#        [0, 0, 0, 1, 0, 0],
+#        [0, 1, 0, 1, 0, 1],
+#        [0, 2, 0, 0, 0, 0]]
+#position = (0, 0)
 
+## INPUT - DO NOT TOUCH
+maze = eval(input())
+position = eval(input())
+## END INPUT
 
 def examine(maze, position, part_sol) -> str:
     y, x = position
@@ -31,11 +35,11 @@ def extend(maze, position) -> list:
     options = []
     if x-1 >= 0:
         options.append((y, x-1))
-    if x+1 < len(maze[0]):
+    if x+1 < len(maze):
         options.append((y, x+1))
     if y-1 >= 0:
         options.append((y-1, x))
-    if y+1 < len(maze):
+    if y+1 < len(maze[0]):
         options.append((y+1, x))
     return options
 
@@ -56,5 +60,8 @@ def backtracking(maze, position, part_sol= None):
     return list
 
 
-print(backtracking(maze, position))
+# DO NOT CHANGE
+solutions = backtracking(maze, position)
+solutions.sort()
+print(solutions)
 

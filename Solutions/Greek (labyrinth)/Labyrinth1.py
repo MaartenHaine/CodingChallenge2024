@@ -28,14 +28,18 @@ steps = eval(input())
 def minotaurPos(maze, prevPos) -> list:
     y, x = prevPos
     options = []
-    if x - 1 >= 0 and maze[x-1][y] != 1:
-        options.append((y, x - 1))
-    if x + 1 < len(maze[0]) and maze[x+1][y] != 1:
-        options.append((y, x + 1))
-    if y - 1 >= 0 and maze[x][y-1] != 1:
-        options.append((y - 1, x))
-    if y + 1 < len(maze) and maze[x][y+1] != 1:
-        options.append((y + 1, x))
+    if x - 1 >= 0:
+        if maze[x-1][y] != 1:
+            options.append((y, x - 1))
+    if x + 1 < len(maze):
+        if maze[x+1][y] != 1:
+            options.append((y, x + 1))
+    if y - 1 >= 0:
+        if maze[x][y-1] != 1:
+            options.append((y - 1, x))
+    if y + 1 < len(maze[0]):
+        if maze[x][y+1] != 1:
+            options.append((y + 1, x))
     return options
 
 
