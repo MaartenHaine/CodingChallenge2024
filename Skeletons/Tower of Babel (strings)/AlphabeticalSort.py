@@ -7,7 +7,7 @@ Note: when using sort(), capital words get prioritised over lower letter words.
 
 
 ### INPUT - DO NOT TOUCH
-lijst = eval(input()).split("\n")
+lijst = eval(input())
 ### END INPUT
 
 
