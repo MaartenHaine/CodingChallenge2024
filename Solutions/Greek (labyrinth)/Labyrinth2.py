@@ -1,18 +1,23 @@
 """
-Write a program that can calculate the fastest path you should take to escape from the labyrinth.
-Given the layout of the labyrinth and your starting position.
-Assume that the chatotaurus is not yet in the labyrinth.
-"""
+Minos gave tips on how to deal with the chatotaurus, but he doesn't recall the layout of the labyrinth.
+
+TO DO:
+Write a program that calculates the path(s) you could take (without looping) to escape from the labyrinth.
+Also assume that the chatotaurus is not yet in the labyrinth.
+
+The Layout of the maze is given by:
 #0 is a pathway
 #1 is a wall
 #2 is the goal
-#maze = [[0, 0, 0, 0, 0, 0],
-#        [0, 1, 1, 0, 1, 0],
-#        [1, 1, 0, 0, 1, 0],
-#        [0, 0, 0, 1, 0, 0],
-#        [0, 1, 0, 1, 0, 1],
-#        [0, 2, 0, 0, 0, 0]]
-#position = (0, 0)
+maze = [[0, 0, 0, 0, 0, 0],
+        [0, 1, 1, 0, 1, 0],
+        [1, 1, 0, 0, 1, 0],
+        [0, 0, 0, 1, 0, 0],
+        [0, 1, 0, 1, 0, 1],
+        [0, 2, 1, 1, 0, 0]]
+The Starting position:
+position = (2, 3)
+"""
 
 ## INPUT - DO NOT TOUCH
 maze = eval(input())

@@ -1,4 +1,10 @@
 """
+In the most forgotten of days, Sir Chat of GPT has killed a noble man with much influence.
+His name? Gerald The Short, last of his name, or so we think.
+It would be dreadful to leave his legacy in shambles.
+Luckily we found some parchements laying around in the local library.
+Now it is your turn to find his lost relative(s)!
+
 Given is an incomplete python class for a Family Tree Entity
 The setup, get and equals functions are already given,
 but you still have to implement the set and remove functions (task 1)
