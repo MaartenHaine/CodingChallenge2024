@@ -17,3 +17,8 @@ def caesar_cipher(text, shift):
             decrypted_char = char
         decrypted_text += decrypted_char
     return decrypted_text
+
+
+print(caesar_cipher("mxpvewsxritmqszwezspewvzCICRQIMSDQTEPLERPTPSRLJPE", 12)) 
+
+print(caesar_cipher("longkey", 5))

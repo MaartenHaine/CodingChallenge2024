@@ -1,5 +1,17 @@
 "Vigenere encryption"
 
+def caesar_cipher(text, shift):
+    decrypted_text = ""
+    for char in text:
+        if char.isupper():
+            decrypted_char = chr(((ord(char) - 65 - shift) % 26) + 65)
+        elif char.islower():
+            decrypted_char = chr(((ord(char) - 97 - shift) % 26) + 97)
+        else:
+            decrypted_char = char
+        decrypted_text += decrypted_char
+    return decrypted_text
+
 def vigenere_encrypt(plain_text, key):
     encrypted_text = ""
     key_repeated = key * (len(plain_text) // len(key)) + key[:len(plain_text) % len(key)]
@@ -29,3 +41,24 @@ def vigenere_decrypt(encrypted_text, key):
         else:
             decrypted_text += encrypted_text[i]
     return decrypted_text
+
+def cipher_decrypt(text, key):
+    decrypted_key = caesar_cipher(key, -len(text))
+    print(decrypted_key)
+    return vigenere_decrypt(text, decrypted_key)
+
+def cipher_encrypt(text, key):
+    encrypted_key = caesar_cipher(key, len(text))
+    print(encrypted_key)
+    return vigenere_encrypt(text, key)
+
+print(cipher_encrypt("hello", "key"))
+print(cipher_decrypt("rijvs", "fzt"))
+print("#########")
+print(cipher_encrypt("hello", "longkey"))
+print(cipher_decrypt("ssyry", "gjibfzt"))
+print("#########")
+print(cipher_encrypt("I am very cool", "longkeylongkey"))
+print(cipher_decrypt("T ns zccm iysj", "xazswqkxazswqk"))
+print("#########")
+
