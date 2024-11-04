@@ -7,6 +7,14 @@ Requirements:
     and avoid long number sequences (over 10 digits).
 """
 
+### INPUT - DO NOT TOUCH
+articles = eval(input())
+### END INPUT
+
 
 def validate(message: str) -> bool:
     return False
+
+
+### OUTPUT - DO NOT TOUCH
+print([validate(article) for article in articles])

@@ -11,11 +11,17 @@ Implement the function SuccessorSearcher to find the closest relative of the mur
 What gets priority?
 children > parents > siblings > children of siblings > ... > grandparents > uncles/aunts > ...
 
+x = dead,  * = alive
+c = child, p = parent, g = grandparent
+The number indicates the priority for successor.
+
 g x4-x4 x4-x4   x7-x7
     \   /  \    /  \
 p   x2-x2  x5-x5   *8
     / | \    |
 c *1 x3 x3  x6
+
+so if the most left child dies, then the succesor should be the rightmost parent. (c1 -> p5)
 
 There are many people who die in the middle ages, so there will only be 1 possible closest successor for convenience.
 Your code should be loop resistant though.
