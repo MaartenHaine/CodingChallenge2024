@@ -66,7 +66,10 @@ def optimal_route(coords, cities):
     min_distance = float('inf')
     optimal_route = []
     for p in all_permutations:
-        route = [start_city] + p + [start_city]
+        if p[-1] != start_city:
+            route = [start_city] + p + [start_city]
+        else:
+            route = [start_city] + p
         distance = total_distance(coords, route)
         if distance < min_distance:
             min_distance = distance
@@ -75,3 +78,7 @@ def optimal_route(coords, cities):
 
 
 print(optimal_route(coordinates, ["London", "New York", "Amsterdam", "Cape Town", "Bordeaux"]))
+print(optimal_route(coordinates, ["London", "New York", "Amsterdam", "Hamburg"]))
+print(optimal_route(coordinates, ["London", "New York"]))
+print(optimal_route(coordinates, ["Lisbon", "Boston", "Cadiz"]))
+print(optimal_route(coordinates, ["Lisbon", "Boston", "Cadiz", "Cairo", "Amsterdam", "Hamburg", "Lisbon"]))

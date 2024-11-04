@@ -31,6 +31,7 @@ coordinates = {
 }
 
 import math
+import random
 
 def calculate_distance(city1, city2, coordinates):
     x1, y1 = coordinates[city1]
@@ -68,14 +69,16 @@ def optimal_route_with_pirates(coords, cities, banned_routes):
     min_distance = float('inf')
     optimal_route = []
     for p in all_permutations:
-        route = [start_city] + p + [start_city]
+        if p[-1] != start_city:
+            route = [start_city] + p + [start_city]
+        else:
+            route = [start_city] + p
         distance = total_distance(coords, route)
         if distance < min_distance and not any((route[i], route[i+1]) in banned_routes for i in range(len(route) - 1)):
             min_distance = distance
             optimal_route = route
     return optimal_route
 
-banned_routes = {('Amsterdam', 'Bordeaux'), ("New York", "Boston"), ("Boston", "London")}
-
-print(optimal_route_with_pirates(coordinates, ["London", "New York", "Amsterdam", "Cape Town", "Bordeaux"], banned_routes))
-
+print(optimal_route_with_pirates(coordinates, ["London", "New York", "Amsterdam", "Cape Town", "Bordeaux"], {('Amsterdam', 'Bordeaux'), ("New York", "Boston"), ("Boston", "London")}))
+print(optimal_route_with_pirates(coordinates, ["London", "New York", "Amsterdam", "Hamburg"], {('Amsterdam', 'Hamburg')}))
+print(optimal_route_with_pirates(coordinates, ["Lisbon", "Boston", "Cadiz", "Cairo", "Amsterdam", "Hamburg", "Lisbon"], {("Lisbon", "Boston"), ("Boston", "Cadiz"), ("Cadiz", "Cairo"), ("Cairo", "Amsterdam"), ("Amsterdam", "Hamburg"), ("Hamburg", "Lisbon")}))

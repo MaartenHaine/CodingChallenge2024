@@ -45,6 +45,9 @@ def total_distance(coordinates, cities):
         city2 = cities[i + 1]
         total_distance += calculate_distance(city1, city2, coordinates)
     
-    return total_distance
+    return round(total_distance, 2)
 
 print(total_distance(coordinates, ["London", "New York", "Amsterdam", "Hamburg"]))
+print(total_distance(coordinates, ["London", "New York"]))
+print(total_distance(coordinates, ["Lisbon", "Boston", "Cadiz"]))
+print(total_distance(coordinates, ["Lisbon", "Boston", "Cadiz", "Cairo", "Amsterdam", "Hamburg", "Lisbon"]))
