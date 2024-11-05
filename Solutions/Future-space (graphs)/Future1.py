@@ -1,3 +1,4 @@
+"""
 subgraphs = [
    {
     'Kepler': {'Lilia': 10},
@@ -28,6 +29,11 @@ subgraphs = [
     'Vularus': {'Polaro': 30}
     }
 ]
+"""
+### INPUT - DO NOT TOUCH
+subgraphs = eval(input())
+### END INPUT
+
 def combine_subgraphs(subgraphs):
     if len(subgraphs) == 0:
         return {}
@@ -87,5 +93,6 @@ def match(key, keys):
                 return name
     return None
 
-combined_graph = combine_subgraphs(subgraphs)
-print(combined_graph)
+
+### OUTPUT DO NOT CHANGEs
+print(combine_subgraphs(subgraphs))
