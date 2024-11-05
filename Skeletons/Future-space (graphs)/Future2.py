@@ -30,6 +30,16 @@ graph = graph like in the example
 start = start destination (string)
 end = end destination (string)
 fuel = int
-""" 
+"""
+
+### INPUT - DO NOT TOUCH
+graph = eval(input())
+start = eval(input())
+end = eval(input())
+fuel = eval(input())
+### END INPUT
+
 def Possible_To_Travel(graph, start, end, fuel):
     pass
+
+print(Possible_To_Travel(graph, start, end, fuel))

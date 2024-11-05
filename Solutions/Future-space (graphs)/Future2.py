@@ -1,3 +1,4 @@
+"""
 graph = {
     'Kepler': {'Lilia': 10,'Dalea': 5, 'Enov': 10},
     'Solares': {'Ruxae': 40, 'Polaro': 10},
@@ -13,6 +14,19 @@ graph = {
     'Lilia': {'Guru': 20},
     'Zithea': {'Polaro': 5}
 }
+
+start = "Ulrone"
+end = "Zatalan"
+fuel = 40
+"""
+
+### INPUT - DO NOT TOUCH
+graph = eval(input())
+start = eval(input())
+end = eval(input())
+fuel = eval(input())
+### END INPUT
+
 def Possible_To_Travel(graph, start, end, fuel):
     # Stack for DFS
     stack = [(start, fuel)]
@@ -39,4 +53,5 @@ def Possible_To_Travel(graph, start, end, fuel):
                     stack.append((neighbor, remaining_fuel - distance))
 
     return False
-print(Possible_To_Travel(graph, "Ulrone", "Zatalan", 40))
+
+print(Possible_To_Travel(graph, start, end, fuel))

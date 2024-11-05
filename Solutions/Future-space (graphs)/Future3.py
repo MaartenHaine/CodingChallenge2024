@@ -37,7 +37,6 @@ Note: This is an example situation of what is ***NOT*** possible
         -> "I can travel to my next destination because I have 30 litres in my tank, i can just travel for 20l, then i have 10 left but remake 15 so i have 20l left and therefore i can travel with my remaining 20l and arrive at my destination with 5l still in my tank!"
     (to be clear, you must have the 40litres in your tank to go to the next destination, you can't generate fuel while travelling. Only after you have traveled, you get the extra fuel back)
 
-""" 
 graph = {
     'Kepler': {'Lilia': 10,'Dalea': 5, 'Enov': 10},
     'Solares': {'Ruxae': 40, 'Polaro': 10},
@@ -53,6 +52,20 @@ graph = {
     'Lilia': {'Guru': 20},
     'Zithea': {'Polaro': 5}
 }
+start = "Kepler"
+end = "Lilia"
+fuel = 8
+regen = [10,5]
+"""
+
+### INPUT - DO NOT TOUCH
+graph = eval(input())
+start = eval(input())
+end = eval(input())
+fuel = eval(input())
+regen = eval(input())
+### END INPUT
+
 def travel(graph, start, end, fuel, regen):
     # Stack for DFS
     stack = [(start, fuel)]
@@ -87,4 +100,6 @@ def travel(graph, start, end, fuel, regen):
                     stack.append((neighbor, new_remaining_fuel))
 
     return False
-print(travel(graph, "Kepler", "Lilia", 8, [10,5]))
+
+
+print(travel(graph, start, end, fuel, regen))
