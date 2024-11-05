@@ -21,8 +21,8 @@ example_coordinates = {
     "Lisbon": (38.7223, -9.1393)
     }
 
-cities = eval(input())
 coordinates = eval(input())
+cities = eval(input())
 banned_routes = eval(input())
 ### END ###
 

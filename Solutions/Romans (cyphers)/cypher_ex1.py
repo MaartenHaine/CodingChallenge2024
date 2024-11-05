@@ -6,7 +6,14 @@ input: encrypted text
 output: decrypted text
 """
 
-def caesar_cipher(text, shift):
+### DO NOT TOUCH ###
+
+text = eval(input())
+shift = eval(input())
+
+### END ###
+
+def cipher_decrypt(text, shift):
     decrypted_text = ""
     for char in text:
         if char.isupper():
@@ -19,6 +26,9 @@ def caesar_cipher(text, shift):
     return decrypted_text
 
 
-print(caesar_cipher("mxpvewsxritmqszwezspewvzCICRQIMSDQTEPLERPTPSRLJPE", 12)) 
+#print(caesar_cipher("mxpvewsxritmqszwezspewvzCICRQIMSDQTEPLERPTPSRLJPE", 12))
 
-print(caesar_cipher("longkey", 5))
+#print(caesar_cipher("longkey", 5))
+
+##OUTPUT##
+print(cipher_decrypt(text, shift))

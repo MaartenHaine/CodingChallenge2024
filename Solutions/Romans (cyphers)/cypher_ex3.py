@@ -1,9 +1,43 @@
-'''
-Playful cipher
+"""
+
 https://www.youtube.com/watch?v=OuSX8T-uTuQ
 
-I was thinking about getting an encrypted keyword which they need to decrypt with their previous cypher exercise.
-'''
+You want to encrypt text so that the enemies can't read it, create the cipher instead of decrypting it this time.
+
+Create a 5x5 Grid Key Square:
+    First, create a 5x5 grid using a keyword, omitting duplicate letters and typically combining I and J into a single cell (since there are only 25 squares for the 26 letters).
+    The remaining letters of the alphabet are then filled in the grid.
+
+Encrypting the Message:
+    Break the plaintext message into pairs of letters (digraphs).
+    If a pair has two of the same letters, like "LL," insert a filler (usually "X") between them, turning it into "LX."
+    If the pair falls in the same row of the grid, each letter is replaced with the one
+    immediately to its right (wrapping around to the start of the row if necessary).
+    If the pair falls in the same column, each letter is replaced by the one directly below it (wrapping to the top if necessary).
+    If the pair forms a rectangle, each letter is replaced by the one in its row but in the other letter's column.
+
+Example
+
+With a keyword "MONARCHY," the grid might look like this:
+
+mathematica
+
+M O N A R
+C H Y B D
+E F G I/J K
+L P Q S T
+U V W X Z
+
+For the digraph "HE":
+
+    "H" and "E" form a rectangle, so they are replaced with "C" and "G."
+"""
+### DO NOT
+key = eval(input())
+text = eval(input())
+##
+
+
 # Function to convert the string to lowercase
 def to_lowercase(text):
    return text.lower()
@@ -137,28 +171,29 @@ def encrypt_playfair_cipher(matrix, plaintext_list):
       cipher_text.append(cipher)
    return cipher_text
 
-def cipher_encrypt(text, key):
+def encrypt(text, key):
     text_plain = remove_spaces(to_lowercase(text))
     plaintext_list = group_characters(fill_letter(text_plain))
     if len(plaintext_list[-1]) != 2:
         plaintext_list[-1] = plaintext_list[-1] + 'z'
 
-    print("The Key text:", key)
+    #print("The Key text:", key)
     key = to_lowercase(key)
     matrix = generate_key_matrix(key)
 
-    print("The Plain Text:", text_plain)
+    #print("The Plain Text:", text_plain)
     cipher_list = encrypt_playfair_cipher(matrix, plaintext_list)
 
     cipher_text = ""
     for i in cipher_list:
         cipher_text += i
-    print("The CipherText:", cipher_text)
+    #print("The CipherText:", cipher_text)
     return cipher_text
 
 # Test Cases
-print(cipher_encrypt("hello", "key"))
-print(cipher_encrypt("hello", "longkey"))
-print(cipher_encrypt("Idontliketestcases", "longkeylongkey"))
+#print(cipher_encrypt("hello", "key"))
+#print(cipher_encrypt("hello", "longkey"))
+#print(cipher_encrypt("Idontliketestcases", "longkeylongkey"))
 
-
+##OUTPUT##
+print(encrypt(text, key))

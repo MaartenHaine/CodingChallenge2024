@@ -3,7 +3,7 @@ Connect via tcp to a server and get a the message
 the server is has the ip address ? and the port number is ?
 """
 import socket
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 IP = "127.0.0.1"
 PORT = 12345
