@@ -5,8 +5,8 @@ import datetime as dt
 import random
 
 # amount of drivers, logs, ...
-DRIVERS = 1000
-LOGS = 1000_000
+DRIVERS = 100
+LOGS = 10_000
 LOST_SHIPMENT_PROB = 0.01
 date = dt.datetime.fromisoformat('1908-10-01:00:00:00')
 
@@ -27,6 +27,7 @@ with open("outgoing.txt", "w") as out, open("incoming.txt", "w") as incoming, op
 
     for _ in range(LOGS):
         driver = random.choice(drivers)
+        driver.replace(' ', '_')
         amount = random.randint(1, 10)
         out.write(f"{driver} took {amount} cars on {date}\n")
         date = date + dt.timedelta(minutes=random.randint(0, 10))
