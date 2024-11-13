@@ -25,5 +25,8 @@ def convertor(filename: str, new_name):
 convertor("incoming.txt", "in.txt")
 convertor("outgoing.txt", "out.txt")
 
-answer = hash.getHash("in.txt")
-print(answer)
+# test the file
+with open("in.txt", "r") as f_og:
+    string = f_og.readline()
+    print(string)
+
