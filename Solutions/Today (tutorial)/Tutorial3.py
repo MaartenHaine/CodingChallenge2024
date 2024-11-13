@@ -3,12 +3,12 @@
 
 """
 
-#g = 'good'
-#b = 'bad'
-#lijst = [(g,"1"),(g,"2"),(g,"3"),(b,"4"),(b,"5"),(g,"6"),(b,"7"),(b,"8"),(g,"9"),(g,"10"),(b,"11"),(g,"12"),(b,"13"),(b,"14"),(g,"15"),(g,"16"),(g,"17")]
+g = 'good'
+b = 'bad'
+lijst = [(g,"1"),(g,"2"),(g,"3"),(b,"4"),(b,"5"),(g,"6"),(b,"7"),(b,"8"),(g,"9"),(g,"10"),(b,"11"),(g,"12"),(b,"13"),(b,"14"),(g,"15"),(g,"16"),(g,"17")]
 
 ### INPUT - DO NOT TOUCH
-lijst = eval(input())
+#lijst = eval(input())
 ### END INPUT
 
 
@@ -22,4 +22,7 @@ def grouping(lijst: list) -> dict:
     return groups
 
 
-print(grouping(lijst))
+dictionairy = grouping(lijst)
+for key in dictionairy:
+    dictionairy[key].sort()
+print(dictionairy)
