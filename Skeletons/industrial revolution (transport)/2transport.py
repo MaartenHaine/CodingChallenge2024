@@ -6,8 +6,9 @@ You can assume that if a shipment arrives, it arrives with either all of its car
 """
 
 
+
 def get_shipment_loss(file_incoming: str, file_outgoing: str) -> float:
     return 0
 
 
-print(get_shipment_loss("in.csv", "out.csv"))
+print(get_shipment_loss("in.txt", "out.txt"))
