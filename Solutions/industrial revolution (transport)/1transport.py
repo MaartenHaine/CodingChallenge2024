@@ -4,7 +4,7 @@ Your first task is to reorganize your predecessor’s shipment records into the 
 name_truck_driver|amount of cars|date.
 
 to validate the generated files you have to provide us the hash of the files
-you can use in_valid.txt as a reference
+you can use out_valid.txt as a reference
 """
 import hash
 
