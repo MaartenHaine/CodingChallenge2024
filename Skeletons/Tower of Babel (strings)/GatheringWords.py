@@ -3,6 +3,7 @@ string = \
 "The world of language has been turned to chaos, nobody can understand another. " \
 "It is your task to gather words from this explanation in a list. " \
 "In this list there should be no double words and no punctuation marks. " \
+"The words in the list should have the same sequence as given by the string and all words should be lowercased." \
 "Good luck!"
 '''
 
