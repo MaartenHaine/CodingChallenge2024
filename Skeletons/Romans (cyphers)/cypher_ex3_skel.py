@@ -1,8 +1,10 @@
 """
-
-https://www.youtube.com/watch?v=OuSX8T-uTuQ
-
+It appears that you had a mole on your side.
 You want to encrypt text so that the enemies can't read it, create the cipher instead of decrypting it this time.
+This time with a cipher ChatGPT will have difficulty against!
+
+The Playfair cipher.
+https://www.youtube.com/watch?v=OuSX8T-uTuQ
 
 Create a 5x5 Grid Key Square:
     First, create a 5x5 grid using a keyword, omitting duplicate letters and typically combining I and J into a single cell (since there are only 25 squares for the 26 letters).

@@ -34,4 +34,5 @@ def get_message()->str:
 
     return "sin(x)"
 
+#get_message()
 print("sin(x)")

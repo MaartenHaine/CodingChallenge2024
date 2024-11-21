@@ -32,3 +32,5 @@ son.remove_parent(mother)
 assert len(son.getParents()) == 0
 assert len(mother.getChildren()) == 0
 assert len(father.getChildren()) == 0
+
+print("0")

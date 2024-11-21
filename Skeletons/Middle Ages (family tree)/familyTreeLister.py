@@ -1,6 +1,6 @@
 from PersonClass import Person
 """
-Given the different possible family trees:
+Given different possible family trees:
 familyTreeLister returns a list of Person classes.
  x = dead
  * = alive

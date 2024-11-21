@@ -14,7 +14,7 @@ Example:
     jerald = Person('Jerald', 'Herald')
     esmerald = Person('Esmerald')
     herald = Person('Herald')
-    links = [gerald, jerald, esmerald, herald]
+    links = [herald, esmerald, jerald, gerald]
 #   The output of famTreeBuilder should give back a list of familyTreeEntities so that:
 #
 #    herald

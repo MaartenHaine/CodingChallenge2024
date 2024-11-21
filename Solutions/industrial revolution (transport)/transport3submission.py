@@ -1,5 +1,5 @@
 """
-Put your output from 3transport.py here and submit it on domjudge.
+Put your output from transport3.py here and submit it on domjudge.
 """
 
 print("Gereld")

@@ -1,5 +1,5 @@
 """
-There are words hidden in plain sight, namely inside already gathered words.
+There are even more words hidden inside already gathered words.
 These words can be found by only selecting a few letters of word sequences.
 Given is an extra list of words, check which words can already be found by using the gathered words.
 

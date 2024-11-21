@@ -2,7 +2,7 @@
 In the most forgotten of days, Sir Chat of GPT has killed a noble man with much influence.
 His name? Gerald The Short, last of his name, or so we think.
 It would be dreadful to leave his legacy in shambles.
-Luckily we found some parchements laying around in the local library.
+Luckily we found some parchments lying around in the local library.
 Now it is your turn to find his lost relative(s)!
 
 Given is an incomplete python class for a Family Tree Entity
@@ -10,10 +10,10 @@ The setup, get and equals functions are already given,
 but you still have to implement the set and remove functions (task 1)
 and the up and down listing (task 2).
 
-For uplisting, it should look as follows:
+For up listing, it should look as follows:
  [self, [parent1, [grandparent1, [...], [...]], [grandparent2, [...], [...]]], [parent2, [...], [...]]
 
-For downlisting, it should look as follows:
+For down listing, it should look as follows:
  [self, [child1, [grandchild1, [...], [...]], ...], [child2, ...], ...]
 """
 
