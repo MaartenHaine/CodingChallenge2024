@@ -28,6 +28,16 @@ subgraphs = [
     'Vularus': {'Polaro': 30}
     }
 ]
+subgraphs2 = [
+    {
+    'Australia': {"Europe":100, "Asia": 20, "Afri*a" : 60, "A*erica": 110},
+     'Europe': {"Australia":100, "Africa" : 60, "America": 110},
+     'Asia': {"Europe":100}
+    }
+,
+    {'Asia': { "Australia": 20, "Afri*a" : 60, "A*erica": 110},
+     'Africa': {"Europe":100, "Asia": 20, "Afri*a" : 60, "A*erica": 110}}
+]
 def combine_subgraphs(subgraphs):
     if len(subgraphs) == 0:
         return {}
@@ -87,5 +97,30 @@ def match(key, keys):
                 return name
     return None
 
+graph = {
+    'Kepler': {'Lilia': 10,'Dalea': 5, 'Enov': 10},
+    'Solares': {'Ruxae': 40, 'Polaro': 10},
+    'Vularus': {'Lilia': 20, 'Stevon': 10,'Polaro': 30},
+    'Stevon': {'Zithea': 10},
+    'Ulrone': {'Torus': 15},
+    'Ruxae': {'Vularus': 10, 'Ulrone': 8},
+    'Enov' : {'Zaturn':5, 'Ulrone':20},
+    'Polaro' : {'Zatalan' : 10, 'Vularus': 30},
+    'Torus': {'Kepler': 15, 'Vularus': 5},
+    'Guru': {'Solares': 60},
+    'Zatalan': {'Solares': 30},
+    'Lilia': {'Guru': 20},
+    'Zithea': {'Polaro': 5}
+}
+graph2 = {
+     'Australia': {"Europe":100, "Asia": 20, "Africa" : 60, "America": 110},
+     'Europe': {"Australia":100, "Africa" : 60, "America": 110},
+     'Asia': {"Europe":100, "Australia": 20, "Africa" : 60, "America": 110},
+    'Africa': {"Europe":100, "Asia": 20, "Africa" : 60, "America": 110},
+    }
+
 combined_graph = combine_subgraphs(subgraphs)
 print(combined_graph)
+
+combined_graph2 = combine_subgraphs(subgraphs2)
+print(combined_graph2 == graph2)

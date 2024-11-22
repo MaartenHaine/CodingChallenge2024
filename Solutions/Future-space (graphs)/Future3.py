@@ -53,6 +53,12 @@ graph = {
     'Lilia': {'Guru': 20},
     'Zithea': {'Polaro': 5}
 }
+graph2 = {
+     'Australia': {"Europe":100, "Asia": 20, "Africa" : 60, "America": 110},
+     'Europe': {"Australia":100, "Africa" : 60, "America": 110},
+     'Asia': {"Europe":100, "Australia": 20, "Africa" : 60, "America": 110},
+    'Africa': {"Europe":100, "Asia": 20, "Africa" : 60, "America": 110},
+    }
 def travel(graph, start, end, fuel, regen):
     # Stack for DFS
     stack = [(start, fuel)]
@@ -87,4 +93,9 @@ def travel(graph, start, end, fuel, regen):
                     stack.append((neighbor, new_remaining_fuel))
 
     return False
-print(travel(graph, "Kepler", "Lilia", 8, [10,5]))
+print(travel(graph, "Kepler", "Lilia", 8, [10,5])) #False
+print(travel(graph, "Ulrone", "Zatalan", 400, [0, 0])) #True
+print(travel(graph, "Zaturn", "Vularus", 100, [10,0])) #False
+print(travel(graph, "Ulrone", "Zatalan", 40, [20, 10])) #True
+print(travel(graph2, "Europe", "Asia", 100, [20, 100])) #True
+print(travel(graph, "Zithea", "Stevon", 80, [5, 1])) #True
