@@ -15,7 +15,7 @@ maze = [[0, 0, 0, 0, 0, 0],
         [0, 1, 0, 1, 0, 1],
         [0, 2, 1, 1, 0, 0]]
 The Starting position:
-position = (2, 3)
+position = (0,0)
 The Starting position of the chatotaurus:
 minoPos = (2,3)
 """

@@ -1,3 +1,4 @@
+"""
 subgraphs = [
    {
     'Kepler': {'Lilia': 10},
@@ -28,6 +29,7 @@ subgraphs = [
     'Vularus': {'Polaro': 30}
     }
 ]
+<<<<<<< HEAD
 subgraphs2 = [
     {
     'Australia': {"Europe":100, "Asia": 20, "Afri*a" : 60, "A*erica": 110},
@@ -38,6 +40,13 @@ subgraphs2 = [
     {'Asia': { "Australia": 20, "Afri*a" : 60, "A*erica": 110},
      'Africa': {"Europe":100, "Asia": 20, "Afri*a" : 60, "A*erica": 110}}
 ]
+=======
+"""
+### INPUT - DO NOT TOUCH
+subgraphs = eval(input())
+### END INPUT
+
+>>>>>>> 4f15ed35501922632acd6015d2cc6e8726d466ba
 def combine_subgraphs(subgraphs):
     if len(subgraphs) == 0:
         return {}
@@ -97,6 +106,7 @@ def match(key, keys):
                 return name
     return None
 
+<<<<<<< HEAD
 graph = {
     'Kepler': {'Lilia': 10,'Dalea': 5, 'Enov': 10},
     'Solares': {'Ruxae': 40, 'Polaro': 10},
@@ -124,3 +134,8 @@ print(combined_graph)
 
 combined_graph2 = combine_subgraphs(subgraphs2)
 print(combined_graph2 == graph2)
+=======
+
+### OUTPUT DO NOT CHANGEs
+print(combine_subgraphs(subgraphs))
+>>>>>>> 4f15ed35501922632acd6015d2cc6e8726d466ba

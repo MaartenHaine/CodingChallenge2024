@@ -1,6 +1,6 @@
 """
-After consultation with Minos, we know the current position of the chatotaurus.
-He also tells us a few rules of this chatotaurus:
+After consultation with Minos, you know the current position of the chatotaurus.
+He also tells you a few rules of this chatotaurus:
  - It can't stay in one spot (it is always on the move)
  - When it changes location, it can't detect anyone (so it is safe to pass)
 Only when both you and it are standing on the same location, you will get caught.
@@ -22,7 +22,9 @@ maze = [[0, 0, 0, 0, 0, 0],
 The starting position of the chatotaurus:
 position = (2, 3)
 The amount of steps the chatotaurus has taken:
-steps = 8
+steps = 2
+The result for this specific example should be:
+[(0,3), (2,3), (3,2)]
 """
 
 ### INPUT - DO NOT TOUCH

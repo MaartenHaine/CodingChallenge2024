@@ -1,5 +1,5 @@
 """
-There are words hidden in plain sight, namely inside already gathered words.
+There are even more words hidden inside already gathered words.
 These words can be found by only selecting a few letters of word sequences.
 Given is an extra list of words, check which words can already be found by using the gathered words.
 
@@ -16,6 +16,15 @@ A needed note is that we can add as many words together as we need.
 These words don't have to be next to eachother, but they have to follow the same sequence as the sentence.
 In this example we can use "there" + "was" + "octopus" to get "react", but we can't get "ui" from "octopus" + "little".
 Good Luck
+
+Example:
+    sentence_words = ["There", "was", "once", "a", "little", "octopus"]
+    possible_words = ["react", "ui"]
+    HiddenWords should return ["react"] because:
+    ThERE + wAs + onCE + A + liTTlE + oCTopus
+    -> TERE + A + CE + A + TTE + CT
+    -> TERE + A + CT                    (skip some words)
+    -> TEREACT -> REACT
 """
 
 

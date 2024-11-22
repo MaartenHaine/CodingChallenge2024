@@ -22,4 +22,7 @@ def grouping(lijst: list) -> dict:
     return groups
 
 
-print(grouping(lijst))
+dictionairy = grouping(lijst)
+for key in dictionairy:
+    dictionairy[key].sort()
+print(dictionairy)

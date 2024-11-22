@@ -37,6 +37,17 @@ Note: This is an example situation of what is ***NOT*** possible
         -> "I can travel to my next destination because I have 30 litres in my tank, i can just travel for 20l, then i have 10 left but remake 15 so i have 20l left and therefore i can travel with my remaining 20l and arrive at my destination with 5l still in my tank!"
     (to be clear, you must have the 40litres in your tank to go to the next destination, you can't generate fuel while travelling. Only after you have traveled, you get the extra fuel back)
 
-""" 
+"""
+
+### INPUT - DO NOT TOUCH
+graph = eval(input())
+start = eval(input())
+end = eval(input())
+fuel = eval(input())
+regen = eval(input())
+### END INPUT
+
 def travel(graph,start,end,fuel,regen):
     pass
+
+print(travel(graph, start, end, fuel, regen))

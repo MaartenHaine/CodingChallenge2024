@@ -1,0 +1,4 @@
+{'Australia': {"Europe":100, "Asia": 20, "Africa" : 60, "America": 110},'Europe': {"Australia":100, "Africa" : 60, "America": 110},'Asia': {"Europe":100, "Australia": 20, "Africa" : 60, "America": 110},'Africa': {"Europe":100, "Asia": 20, "Africa" : 60, "America": 110},}
+"Australia"
+"America"
+110

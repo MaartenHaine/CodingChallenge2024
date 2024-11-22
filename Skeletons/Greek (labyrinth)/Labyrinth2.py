@@ -1,8 +1,8 @@
 """
-Minos gave tips on how to deal with the chatotaurus, but he doesn't recall the layout of the labyrinth.
+Minos gave some tips on how to deal with the chatotaurus, but he doesn't recall the layout of the labyrinth.
 
 TO DO:
-Write a program that calculates the path(s) you could take (without looping) to escape from the labyrinth.
+Write a program that calculates all paths you can take (without looping) to escape from the labyrinth.
 Also assume that the chatotaurus is not yet in the labyrinth.
 
 The Layout of the maze is given by:

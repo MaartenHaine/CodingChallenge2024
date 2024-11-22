@@ -1,0 +1,4 @@
+{'Kepler': {'Lilia': 10,'Dalea': 5, 'Enov': 10},'Solares': {'Ruxae': 40, 'Polaro': 10},'Vularus': {'Lilia': 20, 'Stevon': 10,'Polaro': 30},'Stevon': {'Zithea': 10},'Ulrone': {'Torus': 15},'Ruxae': {'Vularus': 10, 'Ulrone': 8},'Enov' : {'Zaturn':5, 'Ulrone':20},'Polaro' : {'Zatalan' : 10, 'Vularus': 30},'Torus': {'Kepler': 15, 'Vularus': 5},'Guru': {'Solares': 60},'Zatalan': {'Solares': 30},'Lilia': {'Guru': 20},'Zithea': {'Polaro': 5}}
+"Ulrone"
+"Zatalan"
+40

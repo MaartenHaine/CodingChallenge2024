@@ -1,5 +1,8 @@
 """
-Chatgpt has given Ceasar's cypher to the enemies before ceasar has made it himself. Give Ceasar the algoritm to break it before it changes hisotry too much.
+You follow the trail of anomalies back to ancient Rome.
+ChatGPT has provided a cypher to some cunning people who want to overthrow Caesars rule.
+This cypher is the famous Caesar cypher, although Caesar hasn't created it yet.
+Make an algorithm to decipher the code before they change history!
 The shift will be given.
 
 input: encrypted text

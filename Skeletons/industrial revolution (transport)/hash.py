@@ -1,16 +1,8 @@
-# https://stackoverflow.com/questions/22058048/hashing-a-file-in-python
-import hashlib
-
-BUF_SIZE = 65536
-
-sha1 = hashlib.sha1()
-
-
-def getHash(filename: str):
-    with open(filename, 'rb') as f:
-        while True:
-            data = f.read(BUF_SIZE)
-            if not data:
-                break
-            sha1.update(data)
-    return sha1.hexdigest()
+def getHash(filename:str):    
+    with open(filename, "r") as f_og:
+        string = f_og.read()
+        hashsum = 0
+        for line in string.split('\n'):
+            for i in range(len(line)):
+                hashsum += ord(line[i])*i
+    return hashsum

@@ -8,6 +8,20 @@ Now it is your turn to find his lost relative(s)!
 Connect the different Person entities with eachother by converting them into familyTree entities.
 Connect them correctly and return the new entities in a list.
 You should also implement the downlisting and uplisting functions in familyTreeEntity.py.
+
+Example:
+    gerald = Person('Gerald', 'Jerald', 'Esmerald')
+    jerald = Person('Jerald', 'Herald')
+    esmerald = Person('Esmerald')
+    herald = Person('Herald')
+    links = [herald, esmerald, jerald, gerald]
+#   The output of famTreeBuilder should give back a list of familyTreeEntities so that:
+#
+#    herald
+#       |
+#    jerald + esmerald
+#           |
+#        gerald
 """
 
 from familyTreeEntity import famTreeBuilder

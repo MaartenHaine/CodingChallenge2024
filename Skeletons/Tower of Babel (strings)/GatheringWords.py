@@ -1,8 +1,11 @@
 '''
 string = \
-"The world of language has been turned to chaos, nobody can understand another. " \
+"The whole world spoke one language until ChatGPT came with its multiple languages. " \
+"It has turned the world in a riot, because they can't seem to understand each other anymore. " \
 "It is your task to gather words from this explanation in a list. " \
 "In this list there should be no double words and no punctuation marks. " \
+"The words in the list should have the same sequence as given by the string and all words should be lowercase. " \
+"When there are double words keep the first in the sequence. " \
 "Good luck!"
 '''
 
@@ -13,5 +16,5 @@ string = eval(input())
 def gatherWords(string: str) -> list:
     return []
 
-
+### OUTPUT - DO NOT TOUCH
 print(gatherWords(string))

@@ -21,7 +21,6 @@ A list of n subgraphs will be given to you in a list; a graph structure looks li
     'V' : {'A' : 10}
     }
 
-""" 
 subgraphs = [
    {
     'Kepler': {'Lilia': 10},
@@ -52,7 +51,8 @@ subgraphs = [
     'Vularus': {'Polaro': 30}
     }
 ]
-''' solution thought process:
+
+    solution thought process:
 
     1. just make a full easy graph with the wrong names.
         This will generate a full graph, that sees incomplete names as seperate planets
@@ -60,9 +60,17 @@ subgraphs = [
     2. find all the real planet names and incomplete planet names and match the incomplete ones to the complete ones, alter the graph accordingly
 
     3. this is an easy problem, but might result in difficult code
-'''
+"""
+
+### INPUT - DO NOT TOUCH
+subgraphs = eval(input())
+### END INPUT
+
 def combine_subgraphs(subgraphs):
     pass
+
+### OUTPUT DO NOT CHANGEs
+print(combine_subgraphs(subgraphs))
 
 
 

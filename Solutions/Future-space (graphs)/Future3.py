@@ -37,7 +37,6 @@ Note: This is an example situation of what is ***NOT*** possible
         -> "I can travel to my next destination because I have 30 litres in my tank, i can just travel for 20l, then i have 10 left but remake 15 so i have 20l left and therefore i can travel with my remaining 20l and arrive at my destination with 5l still in my tank!"
     (to be clear, you must have the 40litres in your tank to go to the next destination, you can't generate fuel while travelling. Only after you have traveled, you get the extra fuel back)
 
-""" 
 graph = {
     'Kepler': {'Lilia': 10,'Dalea': 5, 'Enov': 10},
     'Solares': {'Ruxae': 40, 'Polaro': 10},
@@ -53,12 +52,6 @@ graph = {
     'Lilia': {'Guru': 20},
     'Zithea': {'Polaro': 5}
 }
-graph2 = {
-     'Australia': {"Europe":100, "Asia": 20, "Africa" : 60, "America": 110},
-     'Europe': {"Australia":100, "Africa" : 60, "America": 110},
-     'Asia': {"Europe":100, "Australia": 20, "Africa" : 60, "America": 110},
-    'Africa': {"Europe":100, "Asia": 20, "Africa" : 60, "America": 110},
-    }
 def travel(graph, start, end, fuel, regen):
     # Stack for DFS
     stack = [(start, fuel)]
@@ -93,9 +86,4 @@ def travel(graph, start, end, fuel, regen):
                     stack.append((neighbor, new_remaining_fuel))
 
     return False
-print(travel(graph, "Kepler", "Lilia", 8, [10,5])) #False
-print(travel(graph, "Ulrone", "Zatalan", 400, [0, 0])) #True
-print(travel(graph, "Zaturn", "Vularus", 100, [10,0])) #False
-print(travel(graph, "Ulrone", "Zatalan", 40, [20, 10])) #True
-print(travel(graph2, "Europe", "Asia", 100, [20, 100])) #True
-print(travel(graph, "Zithea", "Stevon", 80, [5, 1])) #True
+print(travel(graph, "Kepler", "Lilia", 8, [10,5]))

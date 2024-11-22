@@ -22,4 +22,15 @@ assert len(mother.getChildren()) == 1
 assert father.getChildren()[0].equals(son)
 assert mother.getChildren()[0].equals(son)
 
-print(0)
+father.remove_child(son)
+assert len(son.getParents()) == 1
+assert len(mother.getChildren()) == 1
+assert len(father.getChildren()) == 0
+assert mother.getChildren()[0].equals(son)
+
+son.remove_parent(mother)
+assert len(son.getParents()) == 0
+assert len(mother.getChildren()) == 0
+assert len(father.getChildren()) == 0
+
+print("0")

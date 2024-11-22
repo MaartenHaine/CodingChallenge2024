@@ -1,5 +1,6 @@
 """
-Vigenere cipher
+The cunning group managed to get a more complicated encryption from ChatGPT.
+This one is called the Vigenere cipher.
 
 input: encrypted text, key
 output: decrypted text

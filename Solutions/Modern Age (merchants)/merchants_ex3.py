@@ -10,8 +10,7 @@ output: list of cities in the order the merchant should visit them
 The coordinates of the cities have been put into a dictionary beforehand.
 This is the solution file (using bruto force) for the exercise:
 """
-
-
+"""
 coordinates = {
     "London": (51.5074, -0.1278),
     "New York": (40.7128, -74.0060),
@@ -29,9 +28,22 @@ coordinates = {
     "Cape Town": (-33.9249, 18.4241),
     "Casablanca": (33.5731, -7.5898)
 }
-
+"""
+### DO NOT TOUCH ###
 import math
-import random
+
+example_coordinates = {
+    "London": (51.5074, -0.1278),
+    "New York": (40.7128, -74.0060),
+    "Amsterdam": (52.3702, 4.8952),
+    "Hamburg": (53.5511, 9.9937),
+    "Lisbon": (38.7223, -9.1393)
+    }
+
+coordinates = eval(input())
+cities = eval(input())
+banned_routes = eval(input())
+### END ###
 
 def calculate_distance(city1, city2, coordinates):
     x1, y1 = coordinates[city1]
@@ -79,6 +91,9 @@ def optimal_route_with_pirates(coords, cities, banned_routes):
             optimal_route = route
     return optimal_route
 
-print(optimal_route_with_pirates(coordinates, ["London", "New York", "Amsterdam", "Cape Town", "Bordeaux"], {('Amsterdam', 'Bordeaux'), ("New York", "Boston"), ("Boston", "London")}))
-print(optimal_route_with_pirates(coordinates, ["London", "New York", "Amsterdam", "Hamburg"], {('Amsterdam', 'Hamburg')}))
-print(optimal_route_with_pirates(coordinates, ["Lisbon", "Boston", "Cadiz", "Cairo", "Amsterdam", "Hamburg", "Lisbon"], {("Lisbon", "Boston"), ("Boston", "Cadiz"), ("Cadiz", "Cairo"), ("Cairo", "Amsterdam"), ("Amsterdam", "Hamburg"), ("Hamburg", "Lisbon")}))
+#print(optimal_route_with_pirates(coordinates, ["London", "New York", "Amsterdam", "Cape Town", "Bordeaux"], {('Amsterdam', 'Bordeaux'), ("New York", "Boston"), ("Boston", "London")}))
+#print(optimal_route_with_pirates(coordinates, ["London", "New York", "Amsterdam", "Hamburg"], {('Amsterdam', 'Hamburg')}))
+#print(optimal_route_with_pirates(coordinates, ["Lisbon", "Boston", "Cadiz", "Cairo", "Amsterdam", "Hamburg", "Lisbon"], {("Lisbon", "Boston"), ("Boston", "Cadiz"), ("Cadiz", "Cairo"), ("Cairo", "Amsterdam"), ("Amsterdam", "Hamburg"), ("Hamburg", "Lisbon")}))
+
+##OUTPUT##
+print(optimal_route_with_pirates(coordinates, cities, banned_routes))

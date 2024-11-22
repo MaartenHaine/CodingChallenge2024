@@ -1,8 +1,8 @@
 """
 Due to difficult economic times, they are looking to dismiss someone.
-Identify the slowest driver.
+Identify the driver with the highesy average shipping time.
 
-hint: The file out_valid.txt contains all of the shipments that were successfully delivered.
+hint: The file in_valid.txt contains all of the shipments that were successfully delivered.
 """
 import datetime as dt
 

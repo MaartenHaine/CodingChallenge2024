@@ -2,7 +2,7 @@
 In the most forgotten of days, Sir Chat of GPT has killed a noble man with much influence.
 His name? Gerald The Short, last of his name, or so we think.
 It would be dreadful to leave his legacy in shambles.
-Luckily we found some parchements laying around in the local library.
+Luckily we found some parchments lying around in the local library.
 Now it is your turn to find his lost relative(s)!
 
 We have already implemented a family tree class to connect all the given Person classes.
@@ -21,9 +21,9 @@ p   x2-x2  x5-x5   *8
     / | \    |
 c *1 x3 x3  x6
 
-so if the most left child dies, then the succesor should be the rightmost parent. (c1 -> p5)
+so if the most left child dies, then the successor should be the rightmost parent. (c1 -> p5)
 
-There are many people who die in the middle ages, so there will only be 1 possible closest successor for convenience.
+There are many people who die in the Middle Ages, so there will only be 1 possible closest successor for convenience.
 Your code should be loop resistant though.
 """
 from familyTreeEntity import FamilyTree, famTreeBuilder
