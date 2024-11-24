@@ -50,7 +50,28 @@ fuel = eval(input())
 regen = eval(input())
 ### END INPUT
 
+def extend(graph, current, part_sol):
+    lijst = []
+    if current in graph.keys():
+        for next in graph[current].keys():
+            if next not in part_sol:
+                lijst.append(next)
+    return lijst
+
+def recursion(graph, current, goal, fuel, regen, part_sol):
+    if goal == current:
+        return True
+    for next in extend(graph, current, part_sol):
+        #print(current, next, goal, fuel, graph[current], part_sol)
+        fuel_spent = graph[current][next]
+        if fuel - fuel_spent < 0:
+            return False
+        fuel_recovered = (fuel_spent//regen[1]) * regen[0]
+        if recursion(graph, next, goal, fuel - fuel_spent + fuel_recovered, regen, part_sol + [next]):
+            return True
+    return False
+
 def travel(graph,start,end,fuel,regen):
-    pass
+    return recursion(graph, start, end, fuel, regen, [start])
 
 print(travel(graph, start, end, fuel, regen))

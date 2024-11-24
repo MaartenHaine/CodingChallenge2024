@@ -29,24 +29,11 @@ subgraphs = [
     'Vularus': {'Polaro': 30}
     }
 ]
-<<<<<<< HEAD
-subgraphs2 = [
-    {
-    'Australia': {"Europe":100, "Asia": 20, "Afri*a" : 60, "A*erica": 110},
-     'Europe': {"Australia":100, "Africa" : 60, "America": 110},
-     'Asia': {"Europe":100}
-    }
-,
-    {'Asia': { "Australia": 20, "Afri*a" : 60, "A*erica": 110},
-     'Africa': {"Europe":100, "Asia": 20, "Afri*a" : 60, "A*erica": 110}}
-]
-=======
 """
 ### INPUT - DO NOT TOUCH
 subgraphs = eval(input())
 ### END INPUT
 
->>>>>>> 4f15ed35501922632acd6015d2cc6e8726d466ba
 def combine_subgraphs(subgraphs):
     if len(subgraphs) == 0:
         return {}
@@ -106,36 +93,14 @@ def match(key, keys):
                 return name
     return None
 
-<<<<<<< HEAD
-graph = {
-    'Kepler': {'Lilia': 10,'Dalea': 5, 'Enov': 10},
-    'Solares': {'Ruxae': 40, 'Polaro': 10},
-    'Vularus': {'Lilia': 20, 'Stevon': 10,'Polaro': 30},
-    'Stevon': {'Zithea': 10},
-    'Ulrone': {'Torus': 15},
-    'Ruxae': {'Vularus': 10, 'Ulrone': 8},
-    'Enov' : {'Zaturn':5, 'Ulrone':20},
-    'Polaro' : {'Zatalan' : 10, 'Vularus': 30},
-    'Torus': {'Kepler': 15, 'Vularus': 5},
-    'Guru': {'Solares': 60},
-    'Zatalan': {'Solares': 30},
-    'Lilia': {'Guru': 20},
-    'Zithea': {'Polaro': 5}
-}
-graph2 = {
-     'Australia': {"Europe":100, "Asia": 20, "Africa" : 60, "America": 110},
-     'Europe': {"Australia":100, "Africa" : 60, "America": 110},
-     'Asia': {"Europe":100, "Australia": 20, "Africa" : 60, "America": 110},
-    'Africa': {"Europe":100, "Asia": 20, "Africa" : 60, "America": 110},
-    }
 
-combined_graph = combine_subgraphs(subgraphs)
-print(combined_graph)
+# DO NOT CHANGE
+try:
+    total_graph = combine_subgraphs(subgraphs)
+    keys = list(total_graph.keys())
+    keys.sort()
+    for key in keys:
+        print(key, total_graph[key])
+except:
+    print("None")
 
-combined_graph2 = combine_subgraphs(subgraphs2)
-print(combined_graph2 == graph2)
-=======
-
-### OUTPUT DO NOT CHANGEs
-print(combine_subgraphs(subgraphs))
->>>>>>> 4f15ed35501922632acd6015d2cc6e8726d466ba
