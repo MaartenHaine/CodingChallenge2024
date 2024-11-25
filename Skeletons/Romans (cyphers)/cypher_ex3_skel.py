@@ -32,7 +32,7 @@ U V W X Z
 
 For the digraph "HE":
 
-    "H" and "E" form a rectangle, so they are replaced with "C" and "G."
+    "H" and "E" form a rectangle, so they are replaced with "C" and "F".
 """
 ### DO NOT
 key = eval(input())
@@ -48,6 +48,6 @@ def encrypt(ciphertext: str, key: str) -> str:
 print(encrypt(text, key))
 
 # Example tests
-assert(encrypt("I want this message to be encoded", "key") == "mugsszzonplyxaxgdaztkyalhildhv")
-assert(encrypt("With this plan we can stop chatgpt from ruining this timeline", "antichatgptkeyI") == "xtapapcredntzpanconqetyhnpdprxqomxctctpnkaqcarlsctlc")
+assert(encrypt("I want this message to be encoded", "key") == "mugsszzonplyxaxgdaztkyalhildgv")
+assert(encrypt("With this plan we can stop chatgpt from ruining this timeline", "antichatgptkeyI") == "xtapapcredntzpanconqetyhnpdprxqomxctctpnkaqcarlsctkz")
 assert(encrypt("At last we will win", "superdupersecretbestestkey") == "fcvlpdxpqmnvmvlo")
