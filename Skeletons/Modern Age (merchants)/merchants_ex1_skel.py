@@ -29,5 +29,12 @@ def total_distance(coordinates, cities):
     #TODO: Calculate the total distance of the route
     return 0
 
+
+# Output do not touch
 print(total_distance(coordinates, cities))
 
+
+# Example test
+assert(total_distance(example_coordinates, ["London", "New York", "Hamburg"]) == 159.64)
+assert(total_distance(example_coordinates, ["London", "New York"]) == 74.66)
+assert(total_distance(example_coordinates, ["Lisbon", "Amsterdam", "New York"]) == 99.33) 

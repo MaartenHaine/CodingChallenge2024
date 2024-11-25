@@ -28,4 +28,13 @@ def optimal_route(coords, cities):
     #TODO
     return []
 
+
+# Output do not touch
 print(optimal_route(coordinates, cities))
+
+
+# tests
+
+assert(optimal_route(example_coordinates, ["London", "New York", "Amsterdam", "Hamburg", "Lisbon"]) == ['London', 'New York', 'Lisbon', 'Hamburg', 'Amsterdam', 'London'])
+assert(optimal_route(example_coordinates, [ "New York", "Hamburg", "Lisbon"]) == ['New York', 'Lisbon', 'Hamburg', 'New York'] )
+assert(optimal_route(example_coordinates, [ "New York", "Hamburg", "Amsterdam", "Lisbon"]) == ['New York', 'Amsterdam', 'Hamburg', 'Lisbon', 'New York'])

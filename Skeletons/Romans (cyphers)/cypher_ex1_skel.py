@@ -22,3 +22,9 @@ def cipher_decrypt(text: str, shift: str) -> str:
 
 ##OUTPUT##
 print(cipher_decrypt(text, shift))
+
+### Example tests
+assert(cipher_decrypt("Gzcorngpwodgtqpg", 2) == "Examplenumberone")
+assert(cipher_decrypt("Cvyknjclskzcpmlc", -2) == "Examplenumberone")
+assert(cipher_decrypt("Rovz wo S kw rovn rycdkqo li dro oxowi", 10) == "Help me I am held hostage by the enemy")
+assert(cipher_decrypt("100 gyh bupy chpuxyx nby mionbylh auny", 20) == "100 men have invaded the southern gate")

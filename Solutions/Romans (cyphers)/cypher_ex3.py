@@ -33,8 +33,8 @@ For the digraph "HE":
     "H" and "E" form a rectangle, so they are replaced with "C" and "G."
 """
 ### DO NOT
-key = eval(input())
-text = eval(input())
+#key = eval(input())
+#text = eval(input())
 ##
 
 
@@ -191,9 +191,9 @@ def encrypt(text, key):
     return cipher_text
 
 # Test Cases
-#print(cipher_encrypt("hello", "key"))
-#print(cipher_encrypt("hello", "longkey"))
-#print(cipher_encrypt("Idontliketestcases", "longkeylongkey"))
+print(encrypt("I want this message to be encoded", "key"))
+print(encrypt("With this plan we can stop chatgpt from ruining this timeline", "antichatgptkeyI"))
+print(encrypt("At last we will win", "superdupersecretbestestkey"))
 
 ##OUTPUT##
-print(encrypt(text, key))
+#print(encrypt(text, key))

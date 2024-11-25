@@ -39,8 +39,8 @@ example_coordinates = {
     "Lisbon": (38.7223, -9.1393)
     }
 
-cities = eval(input())
-coordinates = eval(input())
+#cities = eval(input())
+#coordinates = eval(input())
 ### END ###
 
 
@@ -59,9 +59,16 @@ def total_distance(coordinates, cities):
     
     return round(total_distance, 2)
 
-#print(total_distance(coordinates, ["London", "New York", "Amsterdam", "Hamburg"]))
-#print(total_distance(coordinates, ["London", "New York"]))
-#print(total_distance(coordinates, ["Lisbon", "Boston", "Cadiz"]))
-#print(total_distance(coordinates, ["Lisbon", "Boston", "Cadiz", "Cairo", "Amsterdam", "Hamburg", "Lisbon"]))
 
-print(total_distance(coordinates, cities))
+example_coordinates = {
+    "London": (51.5074, -0.1278),
+    "New York": (40.7128, -74.0060),
+    "Amsterdam": (52.3702, 4.8952),
+    "Hamburg": (53.5511, 9.9937),
+    "Lisbon": (38.7223, -9.1393)
+    }
+print(total_distance(example_coordinates, ["London", "New York", "Hamburg"]))
+print(total_distance(example_coordinates, ["London", "New York"]))
+print(total_distance(example_coordinates, ["Lisbon", "Amsterdam", "New York"]))
+
+#print(total_distance(coordinates, cities))
