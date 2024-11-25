@@ -1,6 +1,6 @@
 """
 You follow the trail of anomalies back to ancient Rome.
-ChatGPT has provided a cypher to some cunning people who want to overthrow Caesars rule.
+ChatGPT has provided a cypher to some cunning people who want to overthrow Caesar's rule.
 This cypher is the famous Caesar cypher, although Caesar hasn't created it yet.
 Make an algorithm to decipher the code before they change history!
 The shift will be given.

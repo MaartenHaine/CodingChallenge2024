@@ -13,7 +13,7 @@ Pretty simple right?
 For a more complicated example, take:
  "There was once a little octopus"
 A needed note is that we can add as many words together as we need.
-These words don't have to be next to eachother, but they have to follow the same sequence as the sentence.
+These words don't have to be next to each other, but they have to follow the same sequence as the sentence.
 In this example we can use "there" + "was" + "octopus" to get "react", but we can't get "ui" from "octopus" + "little".
 Good Luck
 
