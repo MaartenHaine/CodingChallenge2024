@@ -21,3 +21,9 @@ def cipher_decrypt(text: str, key: str) -> str:
 
 ##OUTPUT##
 print(cipher_decrypt(text, key))
+
+
+# Example tests
+assert(cipher_decrypt("S fkzc jmerb xfo cxiki", "oic") == "I have found the enemy")
+assert(cipher_decrypt("Sxvrgd al jcfq", "eqodqfbmeeiadp") == "Attack at noon")
+assert(cipher_decrypt("Wm plgv smwkij ffu bnwfaj lx ala jzxtpazy wicila.", "dlzloouxohwkhzruog") == "We have hidden our troups at the southern forest.")

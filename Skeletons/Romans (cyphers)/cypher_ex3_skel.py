@@ -46,3 +46,8 @@ def encrypt(ciphertext: str, key: str) -> str:
 
 ##OUTPUT##
 print(encrypt(text, key))
+
+# Example tests
+assert(encrypt("I want this message to be encoded", "key") == "mugsszzonplyxaxgdaztkyalhildhv")
+assert(encrypt("With this plan we can stop chatgpt from ruining this timeline", "antichatgptkeyI") == "xtapapcredntzpanconqetyhnpdprxqomxctctpnkaqcarlsctlc")
+assert(encrypt("At last we will win", "superdupersecretbestestkey") == "fcvlpdxpqmnvmvlo")

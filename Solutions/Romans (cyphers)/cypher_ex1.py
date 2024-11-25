@@ -8,8 +8,9 @@ output: decrypted text
 
 ### DO NOT TOUCH ###
 
-text = eval(input())
-shift = eval(input())
+text = "100 men have invaded the southern gate"
+shift = -20
+
 
 ### END ###
 
@@ -31,4 +32,10 @@ def cipher_decrypt(text, shift):
 #print(caesar_cipher("longkey", 5))
 
 ##OUTPUT##
+
+assert(cipher_decrypt("Gzcorngpwodgtqpg", 2) == "Examplenumberone")
+assert(cipher_decrypt("Cvyknjclskzcpmlc", -2) == "Examplenumberone")
+assert(cipher_decrypt("Rovz wo S kw rovn rycdkqo li dro oxowi", 10) == "Help me I am held hostage by the enemy")
+assert(cipher_decrypt("100 gyh bupy chpuxyx nby mionbylh auny", 20) == "100 men have invaded the southern gate")
 print(cipher_decrypt(text, shift))
+
