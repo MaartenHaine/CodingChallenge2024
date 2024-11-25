@@ -33,3 +33,10 @@ def optimal_route_with_pirates(coords, cities, banned_routes):
 
 ##OUTPUT##
 print(optimal_route_with_pirates(coordinates, cities, banned_routes))
+
+# Example tests
+
+assert(optimal_route_with_pirates(example_coordinates, ["Amsterdam", "Hamburg", "London", "Lisbon"], {("Amsterdam", "Hamburg")}) == ['Amsterdam', 'Hamburg', 'Lisbon', 'London', 'Amsterdam'])
+assert(optimal_route_with_pirates(example_coordinates, ["London", "New York", "Amsterdam", "Lisbon", "Hamburg"], {("Hamburg", "London")}) == ['London', 'New York', 'Lisbon', 'Hamburg', 'Amsterdam', 'London'])
+assert(optimal_route_with_pirates(example_coordinates, ["London", "New York", "Amsterdam", "Lisbon", "Hamburg"], {("New York", "London"), ("Amsterdam", "Hamburg"), ("New York", "Amsterdam")}) == ['London', 'Amsterdam', 'Hamburg', 'New York', 'Lisbon', 'London'])
+assert(optimal_route_with_pirates(example_coordinates, ["London", "Lisbon", "Hamburg"], {("Hamburg", "London")}) == ['London', 'Hamburg', 'Lisbon', 'London'])
