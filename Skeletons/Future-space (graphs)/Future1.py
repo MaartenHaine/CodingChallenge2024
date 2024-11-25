@@ -7,8 +7,8 @@ As if it wasn't hard enough to figure it out, some of the names in the subgraphs
 In this exercise you will generate the correct graph given a set amount of sub-graphs.
 
 Note: this is a directed graph.
-Note: you can assume every planetname is written fully at least once!
-Note: it might be helpful to define multiple functions so you don't get spaghetticode
+Note: you can assume every planet name is written fully at least once!
+Note: it might be helpful to define multiple functions so you don't get spaghetti code
 
 A list of n subgraphs will be given to you in a list; a graph structure looks like this:
 {'AAA': {'B': 10},
@@ -55,7 +55,7 @@ subgraphs = [
     solution thought process:
 
     1. just make a full easy graph with the wrong names.
-        This will generate a full graph, that sees incomplete names as seperate planets
+        This will generate a full graph, that sees incomplete names as separate planets
 
     2. find all the real planet names and incomplete planet names and match the incomplete ones to the complete ones, alter the graph accordingly
 

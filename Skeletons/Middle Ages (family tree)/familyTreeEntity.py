@@ -1,5 +1,5 @@
 """
-In the most forgotten of days, Sir Chat of GPT has killed a noble man with much influence.
+In the most forgotten of days, Sir Chat of GPT has killed a nobleman with much influence.
 His name? Gerald The Short, last of his name, or so we think.
 It would be dreadful to leave his legacy in shambles.
 Luckily we found some parchments lying around in the local library.

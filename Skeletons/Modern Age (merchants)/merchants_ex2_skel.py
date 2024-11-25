@@ -1,9 +1,11 @@
 """
-Here we will have a merchant be given a list of places they have to visit and sell their goods. 
+Because of your efforts of helping the merchants to know the total distance between cities and their trade routes,
+you now have to help them find the most optimal route.
+The merchants have a list of places they have to visit and sell their goods.
 The merchant will start at the first city and has to end their journey at the starting city.
-You will have to create a program that will calculate the shortest route for the merchant to take.
+You will have to create a function that will calculate the shortest route for the merchant to take.
 
-Input: a dictionary of coordinates with the cities and list of cities.
+Input: a dictionary of coordinates with the cities and a list of cities.
 output: list of cities in the order the merchant should visit them
 
 The coordinates of the cities have been put into a dictionary beforehand.

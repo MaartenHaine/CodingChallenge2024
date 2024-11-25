@@ -1,10 +1,10 @@
 """
 You have now counted all harmful anomalies, but that doesn't give much information.
-You should also count the amount anomalies for each time era to get a better understanding of the situation.
+You should also count the amount of anomalies for each time era to get a better understanding of the situation.
 
 Given is a list with multiple values.
 You should convert this list to a dictionary with the values as keys.
-When the value gets called on the dictionary, the amount of times it is present in the list should return.
+When the value gets called on the dictionary, the number of times it is present in the list should return.
 
 Example:
     Given the list

@@ -8,7 +8,7 @@ Before you try to handle these, you should make a program that counts how many a
 
 Given is a list with multiple values.
 Your task, if you choose to accept it,
-is to count the amount of times 'b' (b for bad) is a value in the list.
+is to count the number of times 'b' (b for bad) is a value in the list.
 
 Example:
     Given the list

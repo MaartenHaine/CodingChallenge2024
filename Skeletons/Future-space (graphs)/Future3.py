@@ -7,7 +7,7 @@ You still know what your solar system looks like!
     'Stevon': {'Zithea': 10},
     'Ulrone': {'Torus': 15},
     'Ruxae': {'Vularus': 10, 'Ulrone': 8},
-    'Enov' : {'Zaturn':5, 'Ulrone':20}
+    'Enov' : {'Zaturn':5, 'Ulrone':20},
     'Polaro' : {'Zatalan' : 10, 'Vularus': 30},
     'Torus': {'Kepler': 15, 'Vularus': 5},
     'Guru': {'Solares': 60},
@@ -17,7 +17,7 @@ You still know what your solar system looks like!
 }
 
 But you forgot one really important bit! YOU HAVE A FUELMAKER IN YOUR SPACESHIP.
-It is now your job to figure out whether your trip is possible, knowing you regenerate an x amount of litres of fuel after spending y litres of fuel
+It is now your job to figure out whether your trip is possible, knowing you regenerate an x amount of liters of fuel after spending y liters of fuel
 
 Note: the input will look like this:
 
@@ -34,8 +34,8 @@ Note: This is an example situation of what is ***NOT*** possible
     tank: 30l
     next_dest: 40l
     getback-after-travelled: [15l, 20l]
-        -> "I can travel to my next destination because I have 30 litres in my tank, i can just travel for 20l, then i have 10 left but remake 15 so i have 20l left and therefore i can travel with my remaining 20l and arrive at my destination with 5l still in my tank!"
-    (to be clear, you must have the 40litres in your tank to go to the next destination, you can't generate fuel while travelling. Only after you have traveled, you get the extra fuel back)
+        -> "I can travel to my next destination because I have 30l in my tank, i can just travel for 20l, then i have 10 left but remake 15 so i have 20l left and therefore i can travel with my remaining 20l and arrive at my destination with 5l still in my tank!"
+    (to be clear, you must have the 40l in your tank to go to the next destination, you can't generate fuel while travelling. Only after you have traveled, you get the extra fuel back)
 
 """
 

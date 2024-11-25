@@ -19,7 +19,7 @@ Pfew, you finally figured out what your surroundings look like!
 
 
 But now you'd like to get far far away from your starting point but you need to figure out if your travel destination is even possible!
-Write a function that returns whether it is possible to get to your destination given a startpoint, endpoint, and the amount of litres you have in your tank?
+Write a function that returns whether it is possible to get to your destination given a startpoint, endpoint, and the amount of liters you have in your tank?
 
 Note: your output will be a boolean
 

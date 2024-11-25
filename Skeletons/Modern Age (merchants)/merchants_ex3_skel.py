@@ -1,10 +1,10 @@
 """
-Here we will have a merchant be given a list of places they have to visit and sell their goods. 
-The merchant will start at the first city and has to end their journey at the starting city.
-You will have to create a program that will calculate the shortest route for the merchant to take.
-Cpt GPT has sent pirates from his rule to attack certain trading routes though, and these routes will have to be avoided. or will take longer to travel through. (double the distance)
+It seems like ChatGPT has been busy with the merchants again. 
+He has given our trade routes away to pirates and now they take double the normal time to travel.
 
-Input: a dictionary of coordinates with the cities, a set of a tuple of banned routes, and list of cities.
+You will have to create a function that will calculate the shortest route for the merchant to take.
+
+Input: a dictionary of coordinates with the cities, a set of a tuple of pirate routes, and list of cities that need to be visited.
 output: list of cities in the order the merchant should visit them
 
 The coordinates of the cities have been put into a dictionary beforehand.
@@ -23,16 +23,16 @@ example_coordinates = {
 
 coordinates = eval(input())
 cities = eval(input())
-banned_routes = eval(input())
+pirate_routes = eval(input())
 ### END ###
 
 
-def optimal_route_with_pirates(coords, cities, banned_routes):
+def optimal_route_with_pirates(coords, cities, pirate_routes):
     #TODO
     return []
 
 ##OUTPUT##
-print(optimal_route_with_pirates(coordinates, cities, banned_routes))
+print(optimal_route_with_pirates(coordinates, cities, pirate_routes))
 
 # Example tests
 

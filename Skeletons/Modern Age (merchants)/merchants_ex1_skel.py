@@ -1,13 +1,14 @@
 """
-This first exercise will just be a easy one to get you started.
-You will be given a list of cities and a dictionary of coordinates with the cities as keys and the coordinates as values.
-You will need to calculate the total distance between the cities in the order they are given.
+In a world where ChatGPT has gone back into the past and erased all knowledge of the old trade routes, 
+sailors are now lost and unable to navigate between cities. 
+Your task is to create an algorithm that will help these sailors by calculating the total distance between a series of cities in the order they are given. 
+This will allow them to re-establish their trade routes and continue their voyages.
 
 Input: a dictionary of coordinates with the cities and list of cities.
 output: total distance of the route
 
 The coordinates of the cities have been put into a dictionary beforehand.
-round the result to 2 decimal places
+Round the result to 2 decimal places
 """
 ### DO NOT TOUCH ###
 import math

@@ -1,5 +1,5 @@
 """
-As finishing touch, you should make an algorithm that keeps track of when the different types of anomalies are.
+As finishing touch, you should make an algorithm that keeps track of where the different types of anomalies are.
 
 Given is a list of values and paired names.
 You should convert this list to a dictionary with the values as keys.
