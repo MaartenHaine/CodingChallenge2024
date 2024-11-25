@@ -30,7 +30,7 @@ U V W X Z
 
 For the digraph "HE":
 
-    "H" and "E" form a rectangle, so they are replaced with "C" and "G."
+    "H" and "E" form a rectangle, so they are replaced with "C" and "F".
 """
 ### DO NOT
 #key = eval(input())
@@ -194,6 +194,10 @@ def encrypt(text, key):
 print(encrypt("I want this message to be encoded", "key"))
 print(encrypt("With this plan we can stop chatgpt from ruining this timeline", "antichatgptkeyI"))
 print(encrypt("At last we will win", "superdupersecretbestestkey"))
+
+assert(encrypt("I want this message to be encoded", "key") == "mugsszzonplyxaxgdaztkyalhildgv")
+assert(encrypt("With this plan we can stop chatgpt from ruining this timeline", "antichatgptkeyI") == "xtapapcredntzpanconqetyhnpdprxqomxctctpnkaqcarlsctkz")
+assert(encrypt("At last we will win", "superdupersecretbestestkey") == "fcvlpdxpqmnvmvlo")
 
 ##OUTPUT##
 #print(encrypt(text, key))
