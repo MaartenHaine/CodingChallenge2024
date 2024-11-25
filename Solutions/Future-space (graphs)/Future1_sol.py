@@ -36,9 +36,6 @@ Should return:
     V {XYZ: 4, }
     X {Y: 20, }
     XYZ {V: 5, }
-
-Process finished with exit code 0
-
 """
 
 ### INPUT - DO NOT TOUCH
