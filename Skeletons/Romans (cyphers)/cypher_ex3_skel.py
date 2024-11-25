@@ -17,6 +17,7 @@ Encrypting the Message:
     immediately to its right (wrapping around to the start of the row if necessary).
     If the pair falls in the same column, each letter is replaced by the one directly below it (wrapping to the top if necessary).
     If the pair forms a rectangle, each letter is replaced by the one in its row but in the other letter's column.
+    If the a single letter is left at the end, an X will be added.
 
 Example
 
