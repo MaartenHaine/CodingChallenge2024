@@ -37,11 +37,6 @@ For the digraph "HE":
 #text = eval(input())
 ##
 
-
-# Function to convert the string to lowercase
-def to_lowercase(text):
-   return text.lower()
-
 # Function to remove all spaces in a string
 def remove_spaces(text):
    new_text = ""
@@ -58,6 +53,8 @@ def group_characters(text):
       groups.append(text[group_start:i])
       group_start = i
    groups.append(text[group_start:])
+   if len(groups[-1]) == 1:
+      groups[-1] += 'x'
    return groups
 
 # Function to fill a letter in a string element
@@ -172,13 +169,13 @@ def encrypt_playfair_cipher(matrix, plaintext_list):
    return cipher_text
 
 def encrypt(text, key):
-    text_plain = remove_spaces(to_lowercase(text))
+    text_plain = remove_spaces(text.lower())
     plaintext_list = group_characters(fill_letter(text_plain))
     if len(plaintext_list[-1]) != 2:
         plaintext_list[-1] = plaintext_list[-1] + 'z'
 
     #print("The Key text:", key)
-    key = to_lowercase(key)
+    key = key.lower()
     matrix = generate_key_matrix(key)
 
     #print("The Plain Text:", text_plain)
