@@ -16,7 +16,7 @@ def convertor(filename: str, new_name: str):
 
 ## OUTPUT DO NOT TOUCH
 convertor("dealershipLog.txt", "out.txt")
-convertor("in_valid.txt", "in.txt")
+convertor("factoryLog.txt", "in.txt")
 
 answer = hash.getHash("out.txt")
 print(answer)
