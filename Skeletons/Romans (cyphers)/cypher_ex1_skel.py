@@ -16,7 +16,7 @@ shift = eval(input())
 
 ### END ###
 
-def cipher_decrypt(text: str, shift: str) -> str:
+def cipher_decrypt(text: str, shift: int) -> str:
     #TODO
     return ""
 

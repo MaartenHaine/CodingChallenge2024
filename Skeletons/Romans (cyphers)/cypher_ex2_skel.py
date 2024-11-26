@@ -15,7 +15,7 @@ text = eval(input())
 ##
 
 
-def cipher_decrypt(text: str, key: str) -> str:
+def cipher_decrypt(text: str, key: int) -> str:
     #TODO
     return ""
 
